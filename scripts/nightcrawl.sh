@@ -115,6 +115,13 @@ for audit_file in "$ROOT/reports/"audit-*-"${DATE}".md; do
     fi
 done
 
+# Phase 4: WhatsApp notification
+echo ""
+echo "[4/4] Sending WhatsApp notification..."
+bash "$ROOT/scripts/notify.sh" "$DISCOVERY_REPORT" || {
+    echo "[warn] WhatsApp notification failed"
+}
+
 echo "============================================"
 echo "  Nightly crawl complete - $(date)"
 echo "============================================"

@@ -49,6 +49,9 @@ AUDIT_PROMPT=$(sed "s|REPO_NAME_PLACEHOLDER|${REPO_NAME}|g" "$PROMPT_FILE")
 
 echo "[audit] Running Claude Code audit..." | tee -a "$LOG_FILE"
 
+# Allow nested claude invocation (cron runs fine, but manual testing from claude session needs this)
+unset CLAUDECODE 2>/dev/null || true
+
 claude -p "$AUDIT_PROMPT" --output-format text 2>>"$LOG_FILE" > "$REPORT_FILE" || {
     echo "[audit] Claude Code failed for $REPO_NAME" | tee -a "$LOG_FILE"
     echo "# Audit Failed: $REPO_NAME" > "$REPORT_FILE"

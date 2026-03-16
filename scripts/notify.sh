@@ -30,36 +30,47 @@ if [ ! -f "$REPORT_FILE" ]; then
     exit 1
 fi
 
-# Build summary message from discovery report
-MESSAGE=$(python3 -c "
+# Build message and send entirely in Python
+# CallMeBot rejects %0A newlines, so use flat format with -- separators
+python3 << PYEOF
 import json
+import urllib.parse
+import urllib.request
 
-r = json.loads(open('$REPORT_FILE').read())
-lines = []
-lines.append('*gitnightcrawler* - $DATE')
-lines.append('')
-lines.append('*Top Repos:*')
-for i, repo in enumerate(r.get('top_repos', []), 1):
-    m = repo['momentum']
-    lines.append(f\"{i}. *{repo['full_name']}* ({repo['stars']:,} stars)\")
-    lines.append(f\"   {repo['description'][:80]}\")
-    lines.append(f\"   Score: {m['momentum_score']} | {repo['language']}\")
-    lines.append('')
+r = json.loads(open("$REPORT_FILE").read())
+parts = ["gitnightcrawler $DATE"]
 
-if r.get('marketing_repos'):
-    lines.append('*Marketing Farm:*')
-    for i, repo in enumerate(r.get('marketing_repos', []), 1):
-        lines.append(f\"{i}. *{repo['full_name']}* ({repo['stars']:,} stars)\")
-    lines.append('')
+for i, repo in enumerate(r.get("top_repos", [])[:3], 1):
+    m = repo["momentum"]
+    stars = repo["stars"]
+    if stars >= 1000:
+        stars_str = f"{stars/1000:.1f}k"
+    else:
+        stars_str = str(stars)
+    parts.append(f"{i}. {repo['full_name']} {stars_str} stars {repo['language']} score:{m['momentum_score']}")
 
-lines.append('Review: glow reports/morning-review-$DATE.md')
-print('\n'.join(lines))
-")
+mkt = r.get("marketing_repos", [])
+if mkt:
+    parts.append("-- Mkt:")
+    for i, repo in enumerate(mkt[:2], 1):
+        parts.append(f"{i}. {repo['full_name']} ({repo['stars']} stars)")
 
-# URL-encode the message
-ENCODED=$(python3 -c "import urllib.parse; print(urllib.parse.quote('''$MESSAGE'''))")
+parts.append("-- Review morning-review.md")
 
-# Send via CallMeBot
-RESPONSE=$(curl -s "https://api.callmebot.com/whatsapp.php?phone=${CALLMEBOT_PHONE}&text=${ENCODED}&apikey=${CALLMEBOT_APIKEY}")
+msg = " -- ".join(parts[:4]) + " " + " ".join(parts[4:])
+# Use quote_plus: spaces become +, no newlines
+encoded = urllib.parse.quote_plus(msg)
 
-echo "[notify] WhatsApp sent. Response: $RESPONSE"
+url = f"https://api.callmebot.com/whatsapp.php?phone=${CALLMEBOT_PHONE}&text={encoded}&apikey=${CALLMEBOT_APIKEY}"
+
+try:
+    req = urllib.request.Request(url)
+    resp = urllib.request.urlopen(req, timeout=30)
+    body = resp.read().decode()
+    if "queued" in body.lower():
+        print("[notify] WhatsApp sent successfully")
+    else:
+        print(f"[notify] Response: {body[:200]}")
+except Exception as e:
+    print(f"[notify] WhatsApp failed: {e}")
+PYEOF

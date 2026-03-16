@@ -1,0 +1,53 @@
+You are auditing this open-source repository to find EASY, high-visibility contribution opportunities.
+Focus on quick wins that maintainers will appreciate and merge fast.
+
+Produce a markdown report with these sections:
+
+# Marketing Audit: REPO_NAME_PLACEHOLDER
+
+## Quick Overview
+- What it does (1 paragraph)
+- Tech stack
+- Activity level (commits/week, responsiveness to PRs)
+
+## Quick Win PRs (prioritize these)
+For each, provide ready-to-implement details:
+
+### 1. Documentation Improvements
+- README gaps, typos, missing examples, broken links
+- Missing or incomplete API docs
+- Better installation/setup instructions
+
+### 2. Code Quality
+- Missing type hints / annotations
+- Linting issues
+- Dead code removal
+- Import cleanup
+
+### 3. Tests
+- Missing test files
+- Untested edge cases
+- Test infrastructure improvements
+
+### 4. CI/CD
+- Missing GitHub Actions
+- Badge additions
+- Automated checks
+
+### 5. DX Improvements
+- Better error messages
+- Config file templates
+- Docker/containerization
+
+## Draft PRs
+For the TOP 3 easiest and most impactful items, provide:
+- PR Title: concise, conventional commit style
+- Branch: fix/... or feat/... or docs/...
+- Files to change: exact paths
+- Changes: exact diff description, what to add/modify/remove
+- Effort: time estimate
+- Merge likelihood: high/medium/low and why
+
+## Notes
+- Any red flags (inactive maintainer, PR backlog, etc.)
+- Best time/approach to submit

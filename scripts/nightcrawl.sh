@@ -115,10 +115,20 @@ for audit_file in "$ROOT/reports/"audit-*-"${DATE}".md; do
     fi
 done
 
-# Phase 4: WhatsApp notification
+# Phase 4: Push reports to GitHub
 echo ""
-echo "[4/4] Sending WhatsApp notification..."
-bash "$ROOT/scripts/notify.sh" "$DISCOVERY_REPORT" || {
+echo "[4/5] Pushing reports to GitHub..."
+cd "$ROOT"
+git add reports/morning-review-"${DATE}".md reports/discovery-"${DATE}".json reports/audit-*-"${DATE}".md 2>/dev/null || true
+git commit -m "chore: nightly report ${DATE}" 2>/dev/null && git push 2>&1 || {
+    echo "[warn] Git push failed or nothing to commit"
+}
+REPORT_URL="https://github.com/GuigsEvt/gitnightcrawler/blob/main/reports/morning-review-${DATE}.md"
+
+# Phase 5: WhatsApp notification
+echo ""
+echo "[5/5] Sending WhatsApp notification..."
+bash "$ROOT/scripts/notify.sh" "$DISCOVERY_REPORT" "$REPORT_URL" || {
     echo "[warn] WhatsApp notification failed"
 }
 
@@ -127,9 +137,7 @@ echo "  Nightly crawl complete - $(date)"
 echo "============================================"
 echo ""
 echo "Morning review: $SUMMARY_FILE"
-echo ""
-echo "To review:"
-echo "  glow $SUMMARY_FILE"
+echo "GitHub: $REPORT_URL"
 echo ""
 echo "Reports:"
 ls -la "$ROOT/reports/"*"${DATE}"* 2>/dev/null || echo "  (none)"

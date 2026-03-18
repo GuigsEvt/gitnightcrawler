@@ -1,0 +1,163 @@
+{
+  "run_date": "2026-03-16T19:15:22.939455+00:00",
+  "total_main_candidates": 196,
+  "total_marketing_candidates": 45,
+  "scored_main": 187,
+  "scored_marketing": 41,
+  "top_repos": [
+    {
+      "full_name": "karpathy/autoresearch",
+      "description": "AI agents running research on single-GPU nanochat training automatically",
+      "url": "https://github.com/karpathy/autoresearch",
+      "stars": 38157,
+      "forks": 5274,
+      "open_issues": 119,
+      "language": "Python",
+      "license": "",
+      "created_at": "2026-03-06T22:00:43Z",
+      "pushed_at": "2026-03-16T18:43:26Z",
+      "momentum": {
+        "momentum_score": 176.37,
+        "stars_per_day": 4239.67,
+        "recency_boost": 1.0,
+        "age_days": 9,
+        "days_since_push": 0
+      }
+    },
+    {
+      "full_name": "Light-Heart-Labs/DreamServer",
+      "description": "Local AI anywhere, for everyone \u2014 LLM inference, chat UI, voice, agents, workflows, RAG, and image generation. No cloud, no subscriptions.",
+      "url": "https://github.com/Light-Heart-Labs/DreamServer",
+      "stars": 279,
+      "forks": 94,
+      "open_issues": 33,
+      "language": "Python",
+      "license": "apache-2.0",
+      "created_at": "2026-02-09T13:14:58Z",
+      "pushed_at": "2026-03-16T18:38:31Z",
+      "momentum": {
+        "momentum_score": 167.66,
+        "stars_per_day": 7.97,
+        "recency_boost": 1.0,
+        "age_days": 35,
+        "days_since_push": 0
+      }
+    },
+    {
+      "full_name": "wanikua/danghuangshang",
+      "description": "AI \u671d\u5ef7\u642d\u5efa\u5b8c\u6574\u6559\u7a0b - \u4ece\u96f6\u57fa\u7840\u5230\u8fdb\u9636",
+      "url": "https://github.com/wanikua/danghuangshang",
+      "stars": 1764,
+      "forks": 143,
+      "open_issues": 29,
+      "language": "TypeScript",
+      "license": "mit",
+      "created_at": "2026-02-22T17:17:44Z",
+      "pushed_at": "2026-03-16T19:08:05Z",
+      "momentum": {
+        "momentum_score": 166.21,
+        "stars_per_day": 80.18,
+        "recency_boost": 1.0,
+        "age_days": 22,
+        "days_since_push": 0
+      }
+    },
+    {
+      "full_name": "vivekchand/clawmetry",
+      "description": "See your agent think. Real-time observability dashboard for OpenClaw AI agents.",
+      "url": "https://github.com/vivekchand/clawmetry",
+      "stars": 161,
+      "forks": 29,
+      "open_issues": 55,
+      "language": "Python",
+      "license": "mit",
+      "created_at": "2026-02-13T06:49:19Z",
+      "pushed_at": "2026-03-16T18:31:53Z",
+      "momentum": {
+        "momentum_score": 162.03,
+        "stars_per_day": 5.19,
+        "recency_boost": 1.0,
+        "age_days": 31,
+        "days_since_push": 0
+      }
+    },
+    {
+      "full_name": "microsoft/agent-governance-toolkit",
+      "description": "AI Agent Governance Toolkit \u2014 Policy enforcement, zero-trust identity, execution sandboxing, and reliability engineering for autonomous AI a",
+      "url": "https://github.com/microsoft/agent-governance-toolkit",
+      "stars": 236,
+      "forks": 26,
+      "open_issues": 31,
+      "language": "Python",
+      "license": "mit",
+      "created_at": "2026-03-02T22:11:47Z",
+      "pushed_at": "2026-03-16T19:08:39Z",
+      "momentum": {
+        "momentum_score": 161.29,
+        "stars_per_day": 18.15,
+        "recency_boost": 1.0,
+        "age_days": 13,
+        "days_since_push": 0
+      }
+    }
+  ],
+  "marketing_repos": [
+    {
+      "full_name": "astronomer/agents",
+      "description": "AI agent tooling for data engineering workflows.",
+      "url": "https://github.com/astronomer/agents",
+      "stars": 282,
+      "forks": 29,
+      "open_issues": 20,
+      "language": "Python",
+      "license": "apache-2.0",
+      "created_at": "2026-01-13T16:23:31Z",
+      "pushed_at": "2026-03-10T22:03:49Z",
+      "momentum": {
+        "momentum_score": 117.0,
+        "stars_per_day": 4.55,
+        "recency_boost": 0.5,
+        "age_days": 62,
+        "days_since_push": 5
+      }
+    },
+    {
+      "full_name": "SalesforceCommerceCloud/b2c-developer-tooling",
+      "description": "B2C CLI, MCP, Tooling SDK for Salesforce Agentforce Commerce B2C ",
+      "url": "https://github.com/SalesforceCommerceCloud/b2c-developer-tooling",
+      "stars": 30,
+      "forks": 10,
+      "open_issues": 19,
+      "language": "TypeScript",
+      "license": "apache-2.0",
+      "created_at": "2025-10-31T12:52:16Z",
+      "pushed_at": "2026-03-16T17:56:10Z",
+      "momentum": {
+        "momentum_score": 111.93,
+        "stars_per_day": 0.22,
+        "recency_boost": 1.0,
+        "age_days": 136,
+        "days_since_push": 0
+      }
+    },
+    {
+      "full_name": "nesquikm/mcp-rubber-duck",
+      "description": "An MCP server that acts as a bridge to query multiple OpenAI-compatible LLMs with MCP tool access. Just like rubber duck debugging, explain ",
+      "url": "https://github.com/nesquikm/mcp-rubber-duck",
+      "stars": 143,
+      "forks": 21,
+      "open_issues": 22,
+      "language": "TypeScript",
+      "license": "mit",
+      "created_at": "2025-08-27T15:55:07Z",
+      "pushed_at": "2026-03-16T17:56:20Z",
+      "momentum": {
+        "momentum_score": 102.12,
+        "stars_per_day": 0.71,
+        "recency_boost": 1.0,
+        "age_days": 201,
+        "days_since_push": 0
+      }
+    }
+  ]
+}

@@ -19,10 +19,15 @@ if [ -z "${CALLMEBOT_PHONE:-}" ] || [ -z "${CALLMEBOT_APIKEY:-}" ]; then
 fi
 
 REPORT_FILE="${1:-}"
+REPORT_URL="${2:-}"
 DATE=$(date +%Y-%m-%d)
 
 if [ -z "$REPORT_FILE" ]; then
     REPORT_FILE="$ROOT/reports/discovery-${DATE}.json"
+fi
+
+if [ -z "$REPORT_URL" ]; then
+    REPORT_URL="https://github.com/GuigsEvt/gitnightcrawler/blob/main/reports/morning-review-${DATE}.md"
 fi
 
 if [ ! -f "$REPORT_FILE" ]; then
@@ -55,7 +60,7 @@ if mkt:
     for i, repo in enumerate(mkt[:2], 1):
         parts.append(f"{i}. {repo['full_name']} ({repo['stars']} stars)")
 
-parts.append("-- Review morning-review.md")
+parts.append("-- Report: $REPORT_URL")
 
 msg = " -- ".join(parts[:4]) + " " + " ".join(parts[4:])
 # Use quote_plus: spaces become +, no newlines

@@ -1,0 +1,163 @@
+{
+  "run_date": "2026-03-15T18:40:47.929170+00:00",
+  "total_main_candidates": 194,
+  "total_marketing_candidates": 25,
+  "scored_main": 179,
+  "scored_marketing": 23,
+  "top_repos": [
+    {
+      "full_name": "wanikua/danghuangshang",
+      "description": "AI \u671d\u5ef7\u642d\u5efa\u5b8c\u6574\u6559\u7a0b - \u4ece\u96f6\u57fa\u7840\u5230\u8fdb\u9636",
+      "url": "https://github.com/wanikua/danghuangshang",
+      "stars": 1684,
+      "forks": 130,
+      "open_issues": 26,
+      "language": "TypeScript",
+      "license": "mit",
+      "created_at": "2026-02-22T17:17:44Z",
+      "pushed_at": "2026-03-15T18:23:22Z",
+      "momentum": {
+        "momentum_score": 165.98,
+        "stars_per_day": 80.19,
+        "recency_boost": 1.0,
+        "age_days": 21,
+        "days_since_push": 0
+      }
+    },
+    {
+      "full_name": "karpathy/autoresearch",
+      "description": "AI agents running research on single-GPU nanochat training automatically",
+      "url": "https://github.com/karpathy/autoresearch",
+      "stars": 35862,
+      "forks": 4918,
+      "open_issues": 125,
+      "language": "Python",
+      "license": "",
+      "created_at": "2026-03-06T22:00:43Z",
+      "pushed_at": "2026-03-11T05:32:17Z",
+      "momentum": {
+        "momentum_score": 165.77,
+        "stars_per_day": 4482.75,
+        "recency_boost": 0.6,
+        "age_days": 8,
+        "days_since_push": 4
+      }
+    },
+    {
+      "full_name": "can1357/oh-my-pi",
+      "description": "\u2325  AI Coding agent for the terminal \u2014 hash-anchored edits, optimized tool harness, LSP, Python, browser, subagents, and more",
+      "url": "https://github.com/can1357/oh-my-pi",
+      "stars": 1983,
+      "forks": 173,
+      "open_issues": 23,
+      "language": "TypeScript",
+      "license": "mit",
+      "created_at": "2025-12-31T14:01:28Z",
+      "pushed_at": "2026-03-15T18:02:02Z",
+      "momentum": {
+        "momentum_score": 164.1,
+        "stars_per_day": 26.8,
+        "recency_boost": 1.0,
+        "age_days": 74,
+        "days_since_push": 0
+      }
+    },
+    {
+      "full_name": "vivekchand/clawmetry",
+      "description": "See your agent think. Real-time observability dashboard for OpenClaw AI agents.",
+      "url": "https://github.com/vivekchand/clawmetry",
+      "stars": 156,
+      "forks": 28,
+      "open_issues": 51,
+      "language": "Python",
+      "license": "mit",
+      "created_at": "2026-02-13T06:49:19Z",
+      "pushed_at": "2026-03-15T17:55:57Z",
+      "momentum": {
+        "momentum_score": 161.92,
+        "stars_per_day": 5.2,
+        "recency_boost": 1.0,
+        "age_days": 30,
+        "days_since_push": 0
+      }
+    },
+    {
+      "full_name": "debba/tabularis",
+      "description": "A lightweight, developer-focused database management tool. Supports MySQL, PostgreSQL and SQLite. Hackable with plugins. Built for speed, se",
+      "url": "https://github.com/debba/tabularis",
+      "stars": 700,
+      "forks": 45,
+      "open_issues": 23,
+      "language": "TypeScript",
+      "license": "apache-2.0",
+      "created_at": "2026-01-26T21:48:07Z",
+      "pushed_at": "2026-03-15T17:43:02Z",
+      "momentum": {
+        "momentum_score": 160.56,
+        "stars_per_day": 14.89,
+        "recency_boost": 1.0,
+        "age_days": 47,
+        "days_since_push": 0
+      }
+    }
+  ],
+  "marketing_repos": [
+    {
+      "full_name": "epiral/bb-browser",
+      "description": "Your browser is the API. CLI + MCP server for AI agents to control Chrome with your login state.",
+      "url": "https://github.com/epiral/bb-browser",
+      "stars": 612,
+      "forks": 81,
+      "open_issues": 10,
+      "language": "TypeScript",
+      "license": "mit",
+      "created_at": "2026-01-31T03:55:42Z",
+      "pushed_at": "2026-03-15T18:18:17Z",
+      "momentum": {
+        "momentum_score": 104.0,
+        "stars_per_day": 14.23,
+        "recency_boost": 1.0,
+        "age_days": 43,
+        "days_since_push": 0
+      }
+    },
+    {
+      "full_name": "multidimensionalcats/kanban-mcp",
+      "description": "MCP server for project management with kanban boards, semantic search, and web UI",
+      "url": "https://github.com/multidimensionalcats/kanban-mcp",
+      "stars": 68,
+      "forks": 5,
+      "open_issues": 1,
+      "language": "Python",
+      "license": "mit",
+      "created_at": "2026-03-02T16:57:44Z",
+      "pushed_at": "2026-03-15T18:34:58Z",
+      "momentum": {
+        "momentum_score": 100.1,
+        "stars_per_day": 5.23,
+        "recency_boost": 1.0,
+        "age_days": 13,
+        "days_since_push": 0
+      }
+    },
+    {
+      "full_name": "levante-hub/levante",
+      "description": "Levante - Personal, Secure, Free, Local AI, MCP Client",
+      "url": "https://github.com/levante-hub/levante",
+      "stars": 30,
+      "forks": 13,
+      "open_issues": 25,
+      "language": "TypeScript",
+      "license": "other",
+      "created_at": "2025-08-08T14:41:08Z",
+      "pushed_at": "2026-03-15T12:02:01Z",
+      "momentum": {
+        "momentum_score": 98.39,
+        "stars_per_day": 0.14,
+        "recency_boost": 1.0,
+        "age_days": 219,
+        "days_since_push": 0
+      }
+    }
+  ]
+}

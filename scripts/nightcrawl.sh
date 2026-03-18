@@ -24,7 +24,7 @@ DISCOVERY_REPORT=""
 # Phase 1: Discovery
 if [[ "$MODE" != "--audit-only" ]]; then
     echo ""
-    echo "[1/3] Running discovery..."
+    echo "[1/5] Running discovery..."
     python3 "$ROOT/scripts/discover.py"
     DISCOVERY_REPORT="$ROOT/reports/discovery-${DATE}.json"
 else
@@ -43,10 +43,10 @@ fi
 
 # Phase 2: Audit repos
 echo ""
-echo "[2/3] Auditing repos..."
+echo "[2/5] Auditing repos..."
 
-# Audit main repos
-echo "--- Main repos ---"
+# Write repo list to temp file to avoid pipe + subshell issues
+REPO_LIST=$(mktemp)
 python3 -c "
 import json
 report = json.loads(open('$DISCOVERY_REPORT').read())
@@ -54,17 +54,24 @@ for repo in report.get('top_repos', []):
     print(f\"{repo['full_name']}|{repo['url']}|main\")
 for repo in report.get('marketing_repos', []):
     print(f\"{repo['full_name']}|{repo['url']}|marketing\")
-" | while IFS='|' read -r name url category; do
+" > "$REPO_LIST"
+
+echo "Repos to audit:"
+cat "$REPO_LIST"
+echo ""
+
+while IFS='|' read -r name url category; do
     echo ""
     echo "--- [$category] $name ---"
     bash "$ROOT/scripts/audit.sh" "$name" "$url" "$category" || {
         echo "[warn] Audit failed for $name, continuing..."
     }
-done
+done < "$REPO_LIST"
+rm -f "$REPO_LIST"
 
 # Phase 3: Generate morning review summary
 echo ""
-echo "[3/3] Generating morning review..."
+echo "[3/5] Generating morning review..."
 
 cat > "$SUMMARY_FILE" << HEADER
 # Morning Review - $DATE

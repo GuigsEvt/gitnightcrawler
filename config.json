@@ -1,8 +1,8 @@
 {
-  "max_repos_per_night": 5,
+  "max_repos_per_night": 3,
   "max_marketing_repos": 3,
   "min_stars": 50,
-  "max_stars": 50000,
+  "max_stars": 15000,
   "min_age_days": 7,
   "marketing_max_stars": 2000,
   "marketing_min_stars": 10,

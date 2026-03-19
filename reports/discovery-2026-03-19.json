@@ -1,0 +1,125 @@
+{
+  "run_date": "2026-03-19T01:01:55.184886+00:00",
+  "total_main_candidates": 187,
+  "total_marketing_candidates": 37,
+  "scored_main": 173,
+  "scored_marketing": 35,
+  "top_repos": [
+    {
+      "full_name": "HKUDS/DeepTutor",
+      "description": "\"DeepTutor: AI-Powered Personalized Learning Assistant\"",
+      "url": "https://github.com/HKUDS/DeepTutor",
+      "stars": 10758,
+      "forks": 1445,
+      "open_issues": 33,
+      "language": "Python",
+      "license": "agpl-3.0",
+      "created_at": "2025-12-28T15:35:54Z",
+      "pushed_at": "2026-03-19T00:40:12Z",
+      "momentum": {
+        "momentum_score": 172.7,
+        "stars_per_day": 134.47,
+        "recency_boost": 1.0,
+        "age_days": 80,
+        "days_since_push": 0
+      }
+    },
+    {
+      "full_name": "cft0808/edict",
+      "description": "\ud83c\udfdb\ufe0f \u4e09\u7701\u516d\u90e8\u5236 \u00b7 OpenClaw Multi-Agent Orchestration System \u2014 9 specialized AI agents with real-time dashboard, model config, and full audit trails",
+      "url": "https://github.com/cft0808/edict",
+      "stars": 11021,
+      "forks": 1011,
+      "open_issues": 133,
+      "language": "Python",
+      "license": "mit",
+      "created_at": "2026-02-23T14:35:04Z",
+      "pushed_at": "2026-03-17T23:02:02Z",
+      "momentum": {
+        "momentum_score": 169.06,
+        "stars_per_day": 479.17,
+        "recency_boost": 0.9,
+        "age_days": 23,
+        "days_since_push": 1
+      }
+    },
+    {
+      "full_name": "Light-Heart-Labs/DreamServer",
+      "description": "Local AI anywhere, for everyone \u2014 LLM inference, chat UI, voice, agents, workflows, RAG, and image generation. No cloud, no subscriptions.",
+      "url": "https://github.com/Light-Heart-Labs/DreamServer",
+      "stars": 296,
+      "forks": 105,
+      "open_issues": 33,
+      "language": "Python",
+      "license": "apache-2.0",
+      "created_at": "2026-02-09T13:14:58Z",
+      "pushed_at": "2026-03-19T00:34:14Z",
+      "momentum": {
+        "momentum_score": 168.29,
+        "stars_per_day": 8.0,
+        "recency_boost": 1.0,
+        "age_days": 37,
+        "days_since_push": 0
+      }
+    }
+  ],
+  "marketing_repos": [
+    {
+      "full_name": "holon-run/webmcp-bridge",
+      "description": "Bridge local MCP clients to browser WebMCP tools through Playwright, using native WebMCP when available and injected adapters when not.",
+      "url": "https://github.com/holon-run/webmcp-bridge",
+      "stars": 20,
+      "forks": 2,
+      "open_issues": 6,
+      "language": "TypeScript",
+      "license": "mit",
+      "created_at": "2026-03-11T03:33:46Z",
+      "pushed_at": "2026-03-19T00:58:21Z",
+      "momentum": {
+        "momentum_score": 105.67,
+        "stars_per_day": 2.86,
+        "recency_boost": 1.0,
+        "age_days": 7,
+        "days_since_push": 0
+      }
+    },
+    {
+      "full_name": "lightspeed-core/lightspeed-stack",
+      "description": "LLM tooling stack",
+      "url": "https://github.com/lightspeed-core/lightspeed-stack",
+      "stars": 28,
+      "forks": 77,
+      "open_issues": 43,
+      "language": "Python",
+      "license": "apache-2.0",
+      "created_at": "2025-05-01T08:23:01Z",
+      "pushed_at": "2026-03-18T20:40:55Z",
+      "momentum": {
+        "momentum_score": 98.07,
+        "stars_per_day": 0.09,
+        "recency_boost": 1.0,
+        "age_days": 321,
+        "days_since_push": 0
+      }
+    },
+    {
+      "full_name": "giantswarm/muster",
+      "description": "MCP tool management and workflow proxy",
+      "url": "https://github.com/giantswarm/muster",
+      "stars": 20,
+      "forks": 6,
+      "open_issues": 38,
+      "language": "Go",
+      "license": "apache-2.0",
+      "created_at": "2025-06-20T19:39:02Z",
+      "pushed_at": "2026-03-18T21:36:42Z",
+      "momentum": {
+        "momentum_score": 97.98,
+        "stars_per_day": 0.07,
+        "recency_boost": 1.0,
+        "age_days": 271,
+        "days_since_push": 0
+      }
+    }
+  ]
+}

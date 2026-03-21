@@ -1,0 +1,125 @@
+{
+  "run_date": "2026-03-21T01:01:54.031458+00:00",
+  "total_main_candidates": 187,
+  "total_marketing_candidates": 44,
+  "scored_main": 176,
+  "scored_marketing": 42,
+  "top_repos": [
+    {
+      "full_name": "HKUDS/DeepTutor",
+      "description": "\"DeepTutor: AI-Powered Personalized Learning Assistant\"",
+      "url": "https://github.com/HKUDS/DeepTutor",
+      "stars": 10788,
+      "forks": 1450,
+      "open_issues": 34,
+      "language": "Python",
+      "license": "agpl-3.0",
+      "created_at": "2025-12-28T15:35:54Z",
+      "pushed_at": "2026-03-21T00:36:15Z",
+      "momentum": {
+        "momentum_score": 172.71,
+        "stars_per_day": 131.56,
+        "recency_boost": 1.0,
+        "age_days": 82,
+        "days_since_push": 0
+      }
+    },
+    {
+      "full_name": "nextlevelbuilder/goclaw",
+      "description": "Multi-agent AI gateway with teams, delegation & orchestration. Single Go binary, 11+ LLM providers, 5 channels.",
+      "url": "https://github.com/nextlevelbuilder/goclaw",
+      "stars": 959,
+      "forks": 259,
+      "open_issues": 62,
+      "language": "Go",
+      "license": "other",
+      "created_at": "2026-02-22T07:26:36Z",
+      "pushed_at": "2026-03-21T00:35:36Z",
+      "momentum": {
+        "momentum_score": 169.4,
+        "stars_per_day": 36.88,
+        "recency_boost": 1.0,
+        "age_days": 26,
+        "days_since_push": 0
+      }
+    },
+    {
+      "full_name": "can1357/oh-my-pi",
+      "description": "\u2325  AI Coding agent for the terminal \u2014 hash-anchored edits, optimized tool harness, LSP, Python, browser, subagents, and more",
+      "url": "https://github.com/can1357/oh-my-pi",
+      "stars": 2208,
+      "forks": 194,
+      "open_issues": 31,
+      "language": "TypeScript",
+      "license": "mit",
+      "created_at": "2025-12-31T14:01:28Z",
+      "pushed_at": "2026-03-20T22:53:43Z",
+      "momentum": {
+        "momentum_score": 167.02,
+        "stars_per_day": 27.95,
+        "recency_boost": 1.0,
+        "age_days": 79,
+        "days_since_push": 0
+      }
+    }
+  ],
+  "marketing_repos": [
+    {
+      "full_name": "astronomer/agents",
+      "description": "AI agent tooling for data engineering workflows.",
+      "url": "https://github.com/astronomer/agents",
+      "stars": 284,
+      "forks": 30,
+      "open_issues": 21,
+      "language": "Python",
+      "license": "apache-2.0",
+      "created_at": "2026-01-13T16:23:31Z",
+      "pushed_at": "2026-03-20T17:22:11Z",
+      "momentum": {
+        "momentum_score": 136.5,
+        "stars_per_day": 4.3,
+        "recency_boost": 1.0,
+        "age_days": 66,
+        "days_since_push": 0
+      }
+    },
+    {
+      "full_name": "shaun0927/openchrome",
+      "description": "Open-source browser automation MCP server. Control your real Chrome from any AI agent.",
+      "url": "https://github.com/shaun0927/openchrome",
+      "stars": 142,
+      "forks": 19,
+      "open_issues": 7,
+      "language": "TypeScript",
+      "license": "mit",
+      "created_at": "2026-01-24T15:46:33Z",
+      "pushed_at": "2026-03-21T00:45:23Z",
+      "momentum": {
+        "momentum_score": 106.48,
+        "stars_per_day": 2.58,
+        "recency_boost": 1.0,
+        "age_days": 55,
+        "days_since_push": 0
+      }
+    },
+    {
+      "full_name": "lightspeed-core/lightspeed-stack",
+      "description": "LLM tooling stack",
+      "url": "https://github.com/lightspeed-core/lightspeed-stack",
+      "stars": 29,
+      "forks": 78,
+      "open_issues": 44,
+      "language": "Python",
+      "license": "apache-2.0",
+      "created_at": "2025-05-01T08:23:01Z",
+      "pushed_at": "2026-03-20T20:42:13Z",
+      "momentum": {
+        "momentum_score": 98.08,
+        "stars_per_day": 0.09,
+        "recency_boost": 1.0,
+        "age_days": 323,
+        "days_since_push": 0
+      }
+    }
+  ]
+}

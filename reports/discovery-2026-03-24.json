@@ -1,0 +1,125 @@
+{
+  "run_date": "2026-03-24T01:01:55.206519+00:00",
+  "total_main_candidates": 178,
+  "total_marketing_candidates": 44,
+  "scored_main": 169,
+  "scored_marketing": 43,
+  "top_repos": [
+    {
+      "full_name": "HKUDS/DeepTutor",
+      "description": "\"DeepTutor: AI-Powered Personalized Learning Assistant\"",
+      "url": "https://github.com/HKUDS/DeepTutor",
+      "stars": 10827,
+      "forks": 1461,
+      "open_issues": 35,
+      "language": "Python",
+      "license": "agpl-3.0",
+      "created_at": "2025-12-28T15:35:54Z",
+      "pushed_at": "2026-03-24T00:34:55Z",
+      "momentum": {
+        "momentum_score": 172.73,
+        "stars_per_day": 127.38,
+        "recency_boost": 1.0,
+        "age_days": 85,
+        "days_since_push": 0
+      }
+    },
+    {
+      "full_name": "nextlevelbuilder/goclaw",
+      "description": "GoClaw - GoClaw is OpenClaw rebuilt in Go \u2014 with multi-tenant isolation, 5-layer security, and native concurrency. Deploy AI agent teams at ",
+      "url": "https://github.com/nextlevelbuilder/goclaw",
+      "stars": 1082,
+      "forks": 310,
+      "open_issues": 105,
+      "language": "Go",
+      "license": "other",
+      "created_at": "2026-02-22T07:26:36Z",
+      "pushed_at": "2026-03-24T00:56:00Z",
+      "momentum": {
+        "momentum_score": 170.17,
+        "stars_per_day": 37.31,
+        "recency_boost": 1.0,
+        "age_days": 29,
+        "days_since_push": 0
+      }
+    },
+    {
+      "full_name": "CortexReach/memory-lancedb-pro",
+      "description": "Enhanced LanceDB memory plugin for OpenClaw \u2014 Hybrid Retrieval (Vector + BM25), Cross-Encoder Rerank, Multi-Scope Isolation, Management CLI",
+      "url": "https://github.com/CortexReach/memory-lancedb-pro",
+      "stars": 3422,
+      "forks": 551,
+      "open_issues": 72,
+      "language": "TypeScript",
+      "license": "",
+      "created_at": "2026-02-24T08:38:15Z",
+      "pushed_at": "2026-03-24T00:16:17Z",
+      "momentum": {
+        "momentum_score": 170.16,
+        "stars_per_day": 126.74,
+        "recency_boost": 1.0,
+        "age_days": 27,
+        "days_since_push": 0
+      }
+    }
+  ],
+  "marketing_repos": [
+    {
+      "full_name": "astronomer/agents",
+      "description": "AI agent tooling for data engineering workflows.",
+      "url": "https://github.com/astronomer/agents",
+      "stars": 289,
+      "forks": 31,
+      "open_issues": 24,
+      "language": "Python",
+      "license": "apache-2.0",
+      "created_at": "2026-01-13T16:23:31Z",
+      "pushed_at": "2026-03-21T02:30:50Z",
+      "momentum": {
+        "momentum_score": 128.7,
+        "stars_per_day": 4.19,
+        "recency_boost": 0.8,
+        "age_days": 69,
+        "days_since_push": 2
+      }
+    },
+    {
+      "full_name": "SalesforceCommerceCloud/b2c-developer-tooling",
+      "description": "B2C CLI, MCP, Tooling SDK for Salesforce Agentforce Commerce B2C ",
+      "url": "https://github.com/SalesforceCommerceCloud/b2c-developer-tooling",
+      "stars": 32,
+      "forks": 10,
+      "open_issues": 16,
+      "language": "TypeScript",
+      "license": "apache-2.0",
+      "created_at": "2025-10-31T12:52:16Z",
+      "pushed_at": "2026-03-23T23:23:14Z",
+      "momentum": {
+        "momentum_score": 111.95,
+        "stars_per_day": 0.22,
+        "recency_boost": 1.0,
+        "age_days": 143,
+        "days_since_push": 0
+      }
+    },
+    {
+      "full_name": "lightspeed-core/lightspeed-stack",
+      "description": "LLM tooling stack",
+      "url": "https://github.com/lightspeed-core/lightspeed-stack",
+      "stars": 29,
+      "forks": 78,
+      "open_issues": 45,
+      "language": "Python",
+      "license": "apache-2.0",
+      "created_at": "2025-05-01T08:23:01Z",
+      "pushed_at": "2026-03-23T20:54:16Z",
+      "momentum": {
+        "momentum_score": 98.08,
+        "stars_per_day": 0.09,
+        "recency_boost": 1.0,
+        "age_days": 326,
+        "days_since_push": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "run_date": "2026-03-26T01:01:57.369200+00:00",
+  "total_main_candidates": 188,
+  "total_marketing_candidates": 41,
+  "scored_main": 174,
+  "scored_marketing": 39,
+  "top_repos": [
+    {
+      "full_name": "HKUDS/DeepTutor",
+      "description": "\"DeepTutor: AI-Powered Personalized Learning Assistant\"",
+      "url": "https://github.com/HKUDS/DeepTutor",
+      "stars": 10853,
+      "forks": 1468,
+      "open_issues": 41,
+      "language": "Python",
+      "license": "agpl-3.0",
+      "created_at": "2025-12-28T15:35:54Z",
+      "pushed_at": "2026-03-26T00:42:32Z",
+      "momentum": {
+        "momentum_score": 172.75,
+        "stars_per_day": 124.75,
+        "recency_boost": 1.0,
+        "age_days": 87,
+        "days_since_push": 0
+      }
+    },
+    {
+      "full_name": "cft0808/edict",
+      "description": "\ud83c\udfdb\ufe0f \u4e09\u7701\u516d\u90e8\u5236 \u00b7 OpenClaw Multi-Agent Orchestration System \u2014 9 specialized AI agents with real-time dashboard, model config, and full audit trails",
+      "url": "https://github.com/cft0808/edict",
+      "stars": 12777,
+      "forks": 1257,
+      "open_issues": 133,
+      "language": "Python",
+      "license": "mit",
+      "created_at": "2026-02-23T14:35:04Z",
+      "pushed_at": "2026-03-25T14:29:15Z",
+      "momentum": {
+        "momentum_score": 172.25,
+        "stars_per_day": 425.9,
+        "recency_boost": 1.0,
+        "age_days": 30,
+        "days_since_push": 0
+      }
+    },
+    {
+      "full_name": "anthropics/claude-plugins-official",
+      "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
+      "url": "https://github.com/anthropics/claude-plugins-official",
+      "stars": 14665,
+      "forks": 1542,
+      "open_issues": 364,
+      "language": "Python",
+      "license": "",
+      "created_at": "2025-11-20T18:36:20Z",
+      "pushed_at": "2026-03-25T23:50:12Z",
+      "momentum": {
+        "momentum_score": 163.71,
+        "stars_per_day": 117.32,
+        "recency_boost": 1.0,
+        "age_days": 125,
+        "days_since_push": 0
+      }
+    }
+  ],
+  "marketing_repos": [
+    {
+      "full_name": "astronomer/agents",
+      "description": "AI agent tooling for data engineering workflows.",
+      "url": "https://github.com/astronomer/agents",
+      "stars": 290,
+      "forks": 31,
+      "open_issues": 23,
+      "language": "Python",
+      "license": "apache-2.0",
+      "created_at": "2026-01-13T16:23:31Z",
+      "pushed_at": "2026-03-24T21:58:04Z",
+      "momentum": {
+        "momentum_score": 132.6,
+        "stars_per_day": 4.08,
+        "recency_boost": 0.9,
+        "age_days": 71,
+        "days_since_push": 1
+      }
+    },
+    {
+      "full_name": "redhat-community-ai-tools/UnifAI",
+      "description": "Production-grade multi-agent orchestration engine. Compose agentic workflows from a pluggable catalog of Agents, LLMs, tools, and retrievers",
+      "url": "https://github.com/redhat-community-ai-tools/UnifAI",
+      "stars": 32,
+      "forks": 11,
+      "open_issues": 15,
+      "language": "Python",
+      "license": "apache-2.0",
+      "created_at": "2025-11-20T14:34:50Z",
+      "pushed_at": "2026-03-25T16:35:07Z",
+      "momentum": {
+        "momentum_score": 112.16,
+        "stars_per_day": 0.26,
+        "recency_boost": 1.0,
+        "age_days": 125,
+        "days_since_push": 0
+      }
+    },
+    {
+      "full_name": "SalesforceCommerceCloud/b2c-developer-tooling",
+      "description": "B2C CLI, MCP, Tooling SDK for Salesforce Agentforce Commerce B2C ",
+      "url": "https://github.com/SalesforceCommerceCloud/b2c-developer-tooling",
+      "stars": 33,
+      "forks": 10,
+      "open_issues": 15,
+      "language": "TypeScript",
+      "license": "apache-2.0",
+      "created_at": "2025-10-31T12:52:16Z",
+      "pushed_at": "2026-03-25T21:46:36Z",
+      "momentum": {
+        "momentum_score": 111.98,
+        "stars_per_day": 0.23,
+        "recency_boost": 1.0,
+        "age_days": 145,
+        "days_since_push": 0
+      }
+    }
+  ]
+}

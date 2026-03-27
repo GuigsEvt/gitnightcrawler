@@ -1,0 +1,125 @@
+{
+  "run_date": "2026-03-27T01:01:54.985474+00:00",
+  "total_main_candidates": 193,
+  "total_marketing_candidates": 37,
+  "scored_main": 180,
+  "scored_marketing": 35,
+  "top_repos": [
+    {
+      "full_name": "HKUDS/DeepTutor",
+      "description": "\"DeepTutor: AI-Powered Personalized Learning Assistant\"",
+      "url": "https://github.com/HKUDS/DeepTutor",
+      "stars": 10863,
+      "forks": 1471,
+      "open_issues": 40,
+      "language": "Python",
+      "license": "agpl-3.0",
+      "created_at": "2025-12-28T15:35:54Z",
+      "pushed_at": "2026-03-27T00:42:30Z",
+      "momentum": {
+        "momentum_score": 172.75,
+        "stars_per_day": 123.44,
+        "recency_boost": 1.0,
+        "age_days": 88,
+        "days_since_push": 0
+      }
+    },
+    {
+      "full_name": "jundot/omlx",
+      "description": "LLM inference server with continuous batching & SSD caching for Apple Silicon \u2014 managed from the macOS menu bar",
+      "url": "https://github.com/jundot/omlx",
+      "stars": 7018,
+      "forks": 571,
+      "open_issues": 40,
+      "language": "Python",
+      "license": "apache-2.0",
+      "created_at": "2026-02-13T14:13:27Z",
+      "pushed_at": "2026-03-27T00:43:55Z",
+      "momentum": {
+        "momentum_score": 170.12,
+        "stars_per_day": 171.17,
+        "recency_boost": 1.0,
+        "age_days": 41,
+        "days_since_push": 0
+      }
+    },
+    {
+      "full_name": "anthropics/claude-plugins-official",
+      "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
+      "url": "https://github.com/anthropics/claude-plugins-official",
+      "stars": 14868,
+      "forks": 1574,
+      "open_issues": 380,
+      "language": "Python",
+      "license": "",
+      "created_at": "2025-11-20T18:36:20Z",
+      "pushed_at": "2026-03-26T21:14:41Z",
+      "momentum": {
+        "momentum_score": 163.77,
+        "stars_per_day": 118.0,
+        "recency_boost": 1.0,
+        "age_days": 126,
+        "days_since_push": 0
+      }
+    }
+  ],
+  "marketing_repos": [
+    {
+      "full_name": "astronomer/agents",
+      "description": "AI agent tooling for data engineering workflows.",
+      "url": "https://github.com/astronomer/agents",
+      "stars": 290,
+      "forks": 33,
+      "open_issues": 23,
+      "language": "Python",
+      "license": "apache-2.0",
+      "created_at": "2026-01-13T16:23:31Z",
+      "pushed_at": "2026-03-24T21:58:04Z",
+      "momentum": {
+        "momentum_score": 128.7,
+        "stars_per_day": 4.03,
+        "recency_boost": 0.8,
+        "age_days": 72,
+        "days_since_push": 2
+      }
+    },
+    {
+      "full_name": "redhat-community-ai-tools/UnifAI",
+      "description": "Production-grade multi-agent orchestration engine. Compose agentic workflows from a pluggable catalog of Agents, LLMs, tools, and retrievers",
+      "url": "https://github.com/redhat-community-ai-tools/UnifAI",
+      "stars": 33,
+      "forks": 11,
+      "open_issues": 16,
+      "language": "Python",
+      "license": "apache-2.0",
+      "created_at": "2025-11-20T14:34:50Z",
+      "pushed_at": "2026-03-26T16:07:15Z",
+      "momentum": {
+        "momentum_score": 112.2,
+        "stars_per_day": 0.26,
+        "recency_boost": 1.0,
+        "age_days": 126,
+        "days_since_push": 0
+      }
+    },
+    {
+      "full_name": "levante-hub/levante",
+      "description": "Levante - Personal, Secure, Free, Local AI, MCP Client",
+      "url": "https://github.com/levante-hub/levante",
+      "stars": 32,
+      "forks": 12,
+      "open_issues": 29,
+      "language": "TypeScript",
+      "license": "other",
+      "created_at": "2025-08-08T14:41:08Z",
+      "pushed_at": "2026-03-26T14:05:32Z",
+      "momentum": {
+        "momentum_score": 98.4,
+        "stars_per_day": 0.14,
+        "recency_boost": 1.0,
+        "age_days": 230,
+        "days_since_push": 0
+      }
+    }
+  ]
+}

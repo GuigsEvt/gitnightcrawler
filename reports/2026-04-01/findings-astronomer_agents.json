@@ -1,0 +1,23 @@
+{
+  "repo": "astronomer/agents",
+  "categories": "ai|actions",
+  "critical": 0,
+  "high": 3,
+  "medium": 3,
+  "low": 4,
+  "risk_level": "UNKNOWN",
+  "top_findings": [
+    {
+      "severity": "HIGH",
+      "summary": "auth, insecure-defaults"
+    },
+    {
+      "severity": "HIGH",
+      "summary": "information-disclosure"
+    },
+    {
+      "severity": "HIGH",
+      "summary": "information-disclosure"
+    }
+  ]
+}

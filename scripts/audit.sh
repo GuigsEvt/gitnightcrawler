@@ -150,20 +150,27 @@ import json, re
 
 report = open('$REPORT_FILE').read()
 
-# Count severity markers (look for structured findings, not just word mentions)
-# More precise: look for **Severity**: CRITICAL or similar patterns
-critical = len(re.findall(r'(?i)\*\*severity\*\*:\s*critical|severity:\s*critical|\bcritical\b.*\bfinding\b|\bcritical\b.*\bvuln', report))
-high = len(re.findall(r'(?i)\*\*severity\*\*:\s*high|severity:\s*high|\bhigh\b.*\bfinding\b|\bhigh\b.*\bvuln', report))
-medium = len(re.findall(r'(?i)\*\*severity\*\*:\s*medium|severity:\s*medium', report))
-low = len(re.findall(r'(?i)\*\*severity\*\*:\s*low|severity:\s*low', report))
+# Count severity markers - handle both **Severity**: X and **Severity:** X formats
+sev_pat = r'(?i)\*\*severity[:\*]*\*?\*?:?\s*'
+critical = len(re.findall(sev_pat + r'critical', report))
+high = len(re.findall(sev_pat + r'high', report))
+medium = len(re.findall(sev_pat + r'medium', report))
+low = len(re.findall(sev_pat + r'low', report))
+
+# Fallback: count '- **Severity:** HIGH' style (colon inside bold)
+if critical + high + medium + low == 0:
+    critical = len(re.findall(r'(?i)severity.*?critical', report))
+    high = len(re.findall(r'(?i)severity.*?high', report))
+    medium = len(re.findall(r'(?i)severity.*?medium', report))
+    low = len(re.findall(r'(?i)severity.*?low', report))
 
 # Extract overall risk level
-risk_match = re.search(r'(?i)overall risk level:\s*(CRITICAL|HIGH|MEDIUM|LOW)', report)
+risk_match = re.search(r'(?i)overall risk level[:\s]*(CRITICAL|HIGH|MEDIUM|LOW)', report)
 risk_level = risk_match.group(1).upper() if risk_match else 'UNKNOWN'
 
 # Extract top findings (first 3 critical/high)
 findings = []
-for m in re.finditer(r'(?i)\*\*severity\*\*:\s*(CRITICAL|HIGH).*?\n.*?\*\*(?:Description|Category)\*\*:\s*(.*?)(?:\n|$)', report):
+for m in re.finditer(r'(?i)\*\*severity[:\*]*\*?\*?:?\s*(CRITICAL|HIGH).*?\n.*?\*\*(?:Description|Category|Location)[:\*]*\*?\*?:?\s*(.*?)(?:\n|$)', report):
     findings.append({'severity': m.group(1).upper(), 'summary': m.group(2).strip()[:100]})
     if len(findings) >= 3:
         break

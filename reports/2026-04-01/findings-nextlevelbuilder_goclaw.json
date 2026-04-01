@@ -1,0 +1,23 @@
+{
+  "repo": "nextlevelbuilder/goclaw",
+  "categories": "ai|actions|crypto-primitives",
+  "critical": 0,
+  "high": 5,
+  "medium": 5,
+  "low": 3,
+  "risk_level": "UNKNOWN",
+  "top_findings": [
+    {
+      "severity": "HIGH",
+      "summary": "supply-chain"
+    },
+    {
+      "severity": "HIGH",
+      "summary": "injection, auth"
+    },
+    {
+      "severity": "HIGH",
+      "summary": "auth, config"
+    }
+  ]
+}

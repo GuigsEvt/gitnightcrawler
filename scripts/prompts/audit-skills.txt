@@ -1,0 +1,82 @@
+You are performing a deep security audit of this open-source repository.
+The repository is: REPO_NAME_PLACEHOLDER
+Detected categories: REPO_CATEGORIES_PLACEHOLDER
+
+Perform a thorough security-focused code review. Analyze the codebase systematically:
+
+1. First, explore the project structure (key files, configs, entry points)
+2. Read critical source files (auth, crypto, API handlers, smart contracts)
+3. Check dependency files for known vulnerable packages
+4. Review CI/CD workflows for injection risks
+
+SKILLS_BLOCKCHAIN_PLACEHOLDER
+
+Focus areas based on detected categories:
+- **AI repos**: prompt injection, API key leaks, unsafe deserialization, model data handling
+- **GitHub Actions**: command injection in workflows, secrets exposure, permissions scope
+- **Crypto primitives**: timing side-channels, secret zeroization, RNG quality
+- **General**: OWASP top 10, hardcoded secrets, insecure defaults, supply chain risks
+
+Produce a markdown report with these sections:
+
+# Security Audit: REPO_NAME_PLACEHOLDER
+
+## Repository Overview
+- What does this project do? One paragraph.
+- Tech stack, languages, frameworks.
+- Maturity: early/growing/mature.
+- Categories detected: REPO_CATEGORIES_PLACEHOLDER
+
+## Critical & High Severity Findings
+For each finding:
+- **Severity**: CRITICAL / HIGH
+- **Category**: injection, auth, crypto, supply-chain, logic, etc.
+- **Location**: file path and line numbers
+- **Description**: what is wrong
+- **Impact**: what could go wrong
+- **Fix**: how to fix it
+- **Confidence**: high / medium / low
+
+If no critical/high findings, state "No critical or high severity findings identified."
+
+## Medium & Low Severity Findings
+Same format as above.
+
+## Supply Chain Analysis
+- Dependency health and known vulnerabilities
+- Suspicious or unmaintained dependencies
+
+## Code Quality Assessment
+- Architecture and organization
+- Error handling patterns
+- Test coverage
+- Documentation quality
+
+## Contribution Opportunities
+Top 5 ranked by impact:
+- File: path and line numbers
+- Issue: what is wrong
+- Fix: how to fix it
+- Effort: trivial / small / medium / large
+
+## Draft PRs
+For the TOP 3 most impactful security fixes:
+- PR Title: conventional commit style
+- Branch name
+- Files to modify
+- Changes: detailed description
+- Impact: why this matters
+
+## Scores (1-10)
+| Category | Score |
+|----------|-------|
+| Code Quality | |
+| Security | |
+| Documentation | |
+| Test Coverage | |
+| Contribution Potential | |
+
+## Summary
+- Total findings by severity: Critical: X, High: X, Medium: X, Low: X, Info: X
+- Overall risk level: CRITICAL / HIGH / MEDIUM / LOW
+- Top 3 recommendations

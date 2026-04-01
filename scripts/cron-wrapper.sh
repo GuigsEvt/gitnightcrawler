@@ -6,6 +6,11 @@ export SSH_AUTH_SOCK="$(launchctl getenv SSH_AUTH_SOCK 2>/dev/null || echo /tmp/
 # Ensure ssh-agent has keys loaded for git push
 ssh-add -l >/dev/null 2>&1 || ssh-add ~/.ssh/id_* 2>/dev/null || true
 
+# Anthropic API key for Claude Code headless mode
+if [ -f "$HOME/.claude/.env" ]; then
+    source "$HOME/.claude/.env"
+fi
+
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 mkdir -p "$ROOT/logs"
 exec bash "$ROOT/scripts/nightcrawl.sh" >> "$ROOT/logs/cron.log" 2>&1

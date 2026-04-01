@@ -1,13 +1,13 @@
 {
-  "max_repos_per_night": 3,
+  "max_repos_per_night": 5,
   "max_marketing_repos": 3,
   "min_stars": 50,
-  "max_stars": 15000,
+  "max_stars": 100000,
   "min_age_days": 7,
-  "marketing_max_stars": 2000,
+  "marketing_max_stars": 5000,
   "marketing_min_stars": 10,
   "lookback_days": 7,
-  "preferred_languages": ["Python", "TypeScript", "Go"],
+  "preferred_languages": ["Python", "TypeScript", "Go", "Rust", "Solidity"],
   "language_boost": 1.3,
   "topics": [
     "llm", "large-language-model", "ai-agent", "ai-agents",
@@ -52,5 +52,5 @@
   "log_dir": "logs",
   "repos_dir": "repos",
   "auto_push": false,
-  "schedule": "0 2 * * *"
+  "schedule": "0 6 * * *"
 }

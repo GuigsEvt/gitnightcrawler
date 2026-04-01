@@ -1,0 +1,23 @@
+{
+  "repo": "bitrouter/bitrouter",
+  "categories": "ai|actions|crypto-primitives",
+  "critical": 0,
+  "high": 4,
+  "medium": 4,
+  "low": 4,
+  "risk_level": "UNKNOWN",
+  "top_findings": [
+    {
+      "severity": "HIGH",
+      "summary": "crypto, auth"
+    },
+    {
+      "severity": "HIGH",
+      "summary": "denial-of-service"
+    },
+    {
+      "severity": "HIGH",
+      "summary": "auth, misconfiguration"
+    }
+  ]
+}

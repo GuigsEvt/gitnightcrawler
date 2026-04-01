@@ -278,11 +278,15 @@ def discover():
         "marketing_repos": top_mkt,
     }
 
-    report_dir = ROOT / CONFIG["report_dir"]
-    report_dir.mkdir(exist_ok=True)
     date_str = datetime.now().strftime("%Y-%m-%d")
-    report_path = report_dir / f"discovery-{date_str}.json"
+    # Save in date-based folder
+    report_dir = ROOT / CONFIG["report_dir"] / date_str
+    report_dir.mkdir(parents=True, exist_ok=True)
+    report_path = report_dir / "discovery.json"
     report_path.write_text(json.dumps(report, indent=2))
+    # Also save in old location for backward compat
+    compat_path = ROOT / CONFIG["report_dir"] / f"discovery-{date_str}.json"
+    compat_path.write_text(json.dumps(report, indent=2))
 
     # Print
     print(f"\n{'='*70}")

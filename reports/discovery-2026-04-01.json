@@ -1,0 +1,125 @@
+{
+  "run_date": "2026-04-01T00:01:56.406766+00:00",
+  "total_main_candidates": 190,
+  "total_marketing_candidates": 44,
+  "scored_main": 177,
+  "scored_marketing": 41,
+  "top_repos": [
+    {
+      "full_name": "CortexReach/memory-lancedb-pro",
+      "description": "Enhanced LanceDB memory plugin for OpenClaw \u2014 Hybrid Retrieval (Vector + BM25), Cross-Encoder Rerank, Multi-Scope Isolation, Management CLI",
+      "url": "https://github.com/CortexReach/memory-lancedb-pro",
+      "stars": 3811,
+      "forks": 613,
+      "open_issues": 92,
+      "language": "TypeScript",
+      "license": "",
+      "created_at": "2026-02-24T08:38:15Z",
+      "pushed_at": "2026-03-31T23:09:00Z",
+      "momentum": {
+        "momentum_score": 170.46,
+        "stars_per_day": 108.89,
+        "recency_boost": 1.0,
+        "age_days": 35,
+        "days_since_push": 0
+      }
+    },
+    {
+      "full_name": "AgentsMesh/AgentsMesh",
+      "description": "AgentsMesh \u2014 AI Agent Fleet Command Center. Orchestrate Claude Code, Codex CLI, Gemini CLI, Aider and more from a single platform.",
+      "url": "https://github.com/AgentsMesh/AgentsMesh",
+      "stars": 1204,
+      "forks": 113,
+      "open_issues": 29,
+      "language": "Go",
+      "license": "other",
+      "created_at": "2026-02-28T07:10:42Z",
+      "pushed_at": "2026-03-31T22:31:58Z",
+      "momentum": {
+        "momentum_score": 165.46,
+        "stars_per_day": 38.84,
+        "recency_boost": 1.0,
+        "age_days": 31,
+        "days_since_push": 0
+      }
+    },
+    {
+      "full_name": "epiral/bb-browser",
+      "description": "Your browser is the API. CLI + MCP server for AI agents to control Chrome with your login state.",
+      "url": "https://github.com/epiral/bb-browser",
+      "stars": 3398,
+      "forks": 347,
+      "open_issues": 55,
+      "language": "TypeScript",
+      "license": "mit",
+      "created_at": "2026-01-31T03:55:42Z",
+      "pushed_at": "2026-03-29T09:43:53Z",
+      "momentum": {
+        "momentum_score": 163.41,
+        "stars_per_day": 57.59,
+        "recency_boost": 0.8,
+        "age_days": 59,
+        "days_since_push": 2
+      }
+    }
+  ],
+  "marketing_repos": [
+    {
+      "full_name": "astronomer/agents",
+      "description": "AI agent tooling for data engineering workflows.",
+      "url": "https://github.com/astronomer/agents",
+      "stars": 295,
+      "forks": 34,
+      "open_issues": 23,
+      "language": "Python",
+      "license": "apache-2.0",
+      "created_at": "2026-01-13T16:23:31Z",
+      "pushed_at": "2026-03-31T19:30:41Z",
+      "momentum": {
+        "momentum_score": 135.4,
+        "stars_per_day": 3.83,
+        "recency_boost": 1.0,
+        "age_days": 77,
+        "days_since_push": 0
+      }
+    },
+    {
+      "full_name": "waybarrios/vllm-mlx",
+      "description": "OpenAI and Anthropic compatible server for Apple Silicon. Run LLMs and vision-language models (Llama, Qwen-VL, LLaVA) with continuous batchi",
+      "url": "https://github.com/waybarrios/vllm-mlx",
+      "stars": 718,
+      "forks": 178,
+      "open_issues": 80,
+      "language": "Python",
+      "license": "",
+      "created_at": "2025-12-06T18:26:08Z",
+      "pushed_at": "2026-03-31T21:08:40Z",
+      "momentum": {
+        "momentum_score": 117.0,
+        "stars_per_day": 6.24,
+        "recency_boost": 1.0,
+        "age_days": 115,
+        "days_since_push": 0
+      }
+    },
+    {
+      "full_name": "redhat-community-ai-tools/UnifAI",
+      "description": "Production-grade multi-agent orchestration engine. Compose agentic workflows from a pluggable catalog of Agents, LLMs, tools, and retrievers",
+      "url": "https://github.com/redhat-community-ai-tools/UnifAI",
+      "stars": 34,
+      "forks": 11,
+      "open_issues": 14,
+      "language": "Python",
+      "license": "apache-2.0",
+      "created_at": "2025-11-20T14:34:50Z",
+      "pushed_at": "2026-03-31T20:10:00Z",
+      "momentum": {
+        "momentum_score": 109.59,
+        "stars_per_day": 0.26,
+        "recency_boost": 1.0,
+        "age_days": 131,
+        "days_since_push": 0
+      }
+    }
+  ]
+}

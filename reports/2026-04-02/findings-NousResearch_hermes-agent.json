@@ -1,0 +1,23 @@
+{
+  "repo": "NousResearch/hermes-agent",
+  "categories": "blockchain|ai|actions",
+  "critical": 0,
+  "high": 9,
+  "medium": 12,
+  "low": 5,
+  "risk_level": "UNKNOWN",
+  "top_findings": [
+    {
+      "severity": "HIGH",
+      "summary": "injection"
+    },
+    {
+      "severity": "HIGH",
+      "summary": "network-exposure"
+    },
+    {
+      "severity": "HIGH",
+      "summary": "auth"
+    }
+  ]
+}

@@ -165,7 +165,7 @@ if critical + high + medium + low == 0:
     low = len(re.findall(r'(?i)severity.*?low', report))
 
 # Extract overall risk level
-risk_match = re.search(r'(?i)overall risk level[:\s]*(CRITICAL|HIGH|MEDIUM|LOW)', report)
+risk_match = re.search(r'(?i)overall risk level[\*\*:\s]*(CRITICAL|HIGH|MEDIUM|LOW)', report)
 risk_level = risk_match.group(1).upper() if risk_match else 'UNKNOWN'
 
 # Extract top findings (first 3 critical/high)

@@ -1,0 +1,23 @@
+{
+  "repo": "karpathy/autoresearch",
+  "categories": "ai",
+  "critical": 0,
+  "high": 3,
+  "medium": 2,
+  "low": 3,
+  "risk_level": "UNKNOWN",
+  "top_findings": [
+    {
+      "severity": "HIGH",
+      "summary": "Unsafe deserialization"
+    },
+    {
+      "severity": "HIGH",
+      "summary": "Unsafe deserialization"
+    },
+    {
+      "severity": "HIGH",
+      "summary": "Injection / agent safety"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "repo": "mastra-ai/mastra",
+  "categories": "ai|actions",
+  "critical": 0,
+  "high": 6,
+  "medium": 6,
+  "low": 3,
+  "risk_level": "MEDIUM",
+  "top_findings": [
+    {
+      "severity": "HIGH",
+      "summary": "Code Injection"
+    },
+    {
+      "severity": "HIGH",
+      "summary": "Command Injection / Privilege Escalation"
+    },
+    {
+      "severity": "HIGH",
+      "summary": "Authentication Bypass"
+    }
+  ]
+}

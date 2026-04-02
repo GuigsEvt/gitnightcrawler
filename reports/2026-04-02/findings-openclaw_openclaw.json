@@ -1,0 +1,10 @@
+{
+  "repo": "openclaw/openclaw",
+  "categories": "general",
+  "critical": 0,
+  "high": 0,
+  "medium": 2,
+  "low": 4,
+  "risk_level": "LOW",
+  "top_findings": []
+}

@@ -1,0 +1,23 @@
+{
+  "repo": "microsoft/agent-governance-toolkit",
+  "categories": "blockchain|ai|actions|crypto-primitives",
+  "critical": 3,
+  "high": 10,
+  "medium": 0,
+  "low": 0,
+  "risk_level": "HIGH",
+  "top_findings": [
+    {
+      "severity": "CRITICAL",
+      "summary": "crypto / auth bypass"
+    },
+    {
+      "severity": "CRITICAL",
+      "summary": "crypto"
+    },
+    {
+      "severity": "CRITICAL",
+      "summary": "supply-chain"
+    }
+  ]
+}

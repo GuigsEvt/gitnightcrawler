@@ -1,0 +1,23 @@
+{
+  "repo": "vllm-project/vllm",
+  "categories": "general",
+  "critical": 2,
+  "high": 10,
+  "medium": 7,
+  "low": 3,
+  "risk_level": "HIGH",
+  "top_findings": [
+    {
+      "severity": "CRITICAL",
+      "summary": "Unsafe deserialization"
+    },
+    {
+      "severity": "CRITICAL",
+      "summary": "Unsafe deserialization"
+    },
+    {
+      "severity": "HIGH",
+      "summary": "Network exposure, missing authentication"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "repo": "moltis-org/moltis",
+  "categories": "general",
+  "critical": 0,
+  "high": 4,
+  "medium": 6,
+  "low": 4,
+  "risk_level": "MEDIUM",
+  "top_findings": [
+    {
+      "severity": "HIGH",
+      "summary": "SSRF / Network Security"
+    },
+    {
+      "severity": "HIGH",
+      "summary": "SSRF / Network Security"
+    },
+    {
+      "severity": "HIGH",
+      "summary": "Supply Chain"
+    }
+  ]
+}

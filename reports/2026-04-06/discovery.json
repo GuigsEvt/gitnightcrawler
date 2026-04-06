@@ -1,0 +1,163 @@
+{
+  "run_date": "2026-04-06T00:01:55.480618+00:00",
+  "total_main_candidates": 198,
+  "total_marketing_candidates": 45,
+  "scored_main": 187,
+  "scored_marketing": 38,
+  "top_repos": [
+    {
+      "full_name": "HKUDS/nanobot",
+      "description": "\"\ud83d\udc08 nanobot: The Ultra-Lightweight Personal AI Agent\"",
+      "url": "https://github.com/HKUDS/nanobot",
+      "stars": 38058,
+      "forks": 6610,
+      "open_issues": 923,
+      "language": "Python",
+      "license": "mit",
+      "created_at": "2026-02-01T07:16:15Z",
+      "pushed_at": "2026-04-05T20:07:14Z",
+      "momentum": {
+        "momentum_score": 177.29,
+        "stars_per_day": 604.1,
+        "recency_boost": 1.0,
+        "age_days": 63,
+        "days_since_push": 0
+      }
+    },
+    {
+      "full_name": "moltis-org/moltis",
+      "description": "A Rust-native claw you can trust. One binary \u2014 sandboxed, secure, auditable. Voice, memory, MCP tools, and multi-channel access built-in.",
+      "url": "https://github.com/moltis-org/moltis",
+      "stars": 2496,
+      "forks": 292,
+      "open_issues": 83,
+      "language": "Rust",
+      "license": "mit",
+      "created_at": "2026-01-29T19:36:31Z",
+      "pushed_at": "2026-04-05T23:30:15Z",
+      "momentum": {
+        "momentum_score": 168.12,
+        "stars_per_day": 37.82,
+        "recency_boost": 1.0,
+        "age_days": 66,
+        "days_since_push": 0
+      }
+    },
+    {
+      "full_name": "CloakHQ/CloakBrowser",
+      "description": "Stealth Chromium that passes every bot detection test. Drop-in Playwright replacement with source-level fingerprint patches. 30/30 tests pas",
+      "url": "https://github.com/CloakHQ/CloakBrowser",
+      "stars": 1124,
+      "forks": 91,
+      "open_issues": 28,
+      "language": "Python",
+      "license": "mit",
+      "created_at": "2026-02-22T08:09:57Z",
+      "pushed_at": "2026-04-05T23:55:46Z",
+      "momentum": {
+        "momentum_score": 164.93,
+        "stars_per_day": 26.76,
+        "recency_boost": 1.0,
+        "age_days": 42,
+        "days_since_push": 0
+      }
+    },
+    {
+      "full_name": "FlowiseAI/Flowise",
+      "description": "Build AI Agents, Visually",
+      "url": "https://github.com/FlowiseAI/Flowise",
+      "stars": 51579,
+      "forks": 24071,
+      "open_issues": 821,
+      "language": "TypeScript",
+      "license": "other",
+      "created_at": "2023-03-31T12:23:09Z",
+      "pushed_at": "2026-04-04T00:15:13Z",
+      "momentum": {
+        "momentum_score": 163.66,
+        "stars_per_day": 46.85,
+        "recency_boost": 0.9,
+        "age_days": 1101,
+        "days_since_push": 1
+      }
+    },
+    {
+      "full_name": "superset-sh/superset",
+      "description": "Code Editor for the AI Agents Era - Run an army of Claude Code, Codex, etc. on your machine",
+      "url": "https://github.com/superset-sh/superset",
+      "stars": 8674,
+      "forks": 655,
+      "open_issues": 643,
+      "language": "TypeScript",
+      "license": "other",
+      "created_at": "2025-10-21T09:16:51Z",
+      "pushed_at": "2026-04-05T23:48:50Z",
+      "momentum": {
+        "momentum_score": 161.46,
+        "stars_per_day": 52.25,
+        "recency_boost": 1.0,
+        "age_days": 166,
+        "days_since_push": 0
+      }
+    }
+  ],
+  "marketing_repos": [
+    {
+      "full_name": "astronomer/agents",
+      "description": "AI agent tooling for data engineering workflows.",
+      "url": "https://github.com/astronomer/agents",
+      "stars": 301,
+      "forks": 36,
+      "open_issues": 12,
+      "language": "Python",
+      "license": "apache-2.0",
+      "created_at": "2026-01-13T16:23:31Z",
+      "pushed_at": "2026-04-02T21:50:34Z",
+      "momentum": {
+        "momentum_score": 114.86,
+        "stars_per_day": 3.67,
+        "recency_boost": 0.7,
+        "age_days": 82,
+        "days_since_push": 3
+      }
+    },
+    {
+      "full_name": "bitrouter/bitrouter",
+      "description": "The agentic proxy for modern agent runtimes. Smart, safe, agent-controlled routing across LLMs, tools, and agents.",
+      "url": "https://github.com/bitrouter/bitrouter",
+      "stars": 73,
+      "forks": 1,
+      "open_issues": 9,
+      "language": "Rust",
+      "license": "apache-2.0",
+      "created_at": "2026-03-06T20:04:01Z",
+      "pushed_at": "2026-04-05T18:13:14Z",
+      "momentum": {
+        "momentum_score": 110.72,
+        "stars_per_day": 2.43,
+        "recency_boost": 1.0,
+        "age_days": 30,
+        "days_since_push": 0
+      }
+    },
+    {
+      "full_name": "fosdickio/binary_ninja_mcp",
+      "description": "A Binary Ninja plugin containing an MCP server that enables seamless integration with your favorite LLM/MCP client.",
+      "url": "https://github.com/fosdickio/binary_ninja_mcp",
+      "stars": 299,
+      "forks": 63,
+      "open_issues": 23,
+      "language": "Python",
+      "license": "gpl-3.0",
+      "created_at": "2025-03-28T22:07:55Z",
+      "pushed_at": "2026-04-05T19:38:07Z",
+      "momentum": {
+        "momentum_score": 102.71,
+        "stars_per_day": 0.8,
+        "recency_boost": 1.0,
+        "age_days": 373,
+        "days_since_push": 0
+      }
+    }
+  ]
+}

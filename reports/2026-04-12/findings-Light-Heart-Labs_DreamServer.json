@@ -1,0 +1,23 @@
+{
+  "repo": "Light-Heart-Labs/DreamServer",
+  "categories": "ai|actions|crypto-primitives",
+  "critical": 1,
+  "high": 3,
+  "medium": 5,
+  "low": 5,
+  "risk_level": "MEDIUM",
+  "top_findings": [
+    {
+      "severity": "CRITICAL",
+      "summary": "supply-chain"
+    },
+    {
+      "severity": "HIGH",
+      "summary": "supply-chain"
+    },
+    {
+      "severity": "HIGH",
+      "summary": "injection (prompt injection)"
+    }
+  ]
+}

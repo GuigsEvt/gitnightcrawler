@@ -1,0 +1,23 @@
+{
+  "repo": "moltis-org/moltis",
+  "categories": "ai|actions|crypto-primitives",
+  "critical": 0,
+  "high": 4,
+  "medium": 6,
+  "low": 5,
+  "risk_level": "MEDIUM",
+  "top_findings": [
+    {
+      "severity": "HIGH",
+      "summary": "Injection (Command Injection)"
+    },
+    {
+      "severity": "HIGH",
+      "summary": "Injection (Command Injection)"
+    },
+    {
+      "severity": "HIGH",
+      "summary": "Auth Bypass / Privilege Escalation"
+    }
+  ]
+}

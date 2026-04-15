@@ -1,0 +1,10 @@
+{
+  "repo": "debba/tabularis",
+  "categories": "ai|actions|crypto-primitives",
+  "critical": 0,
+  "high": 0,
+  "medium": 0,
+  "low": 0,
+  "risk_level": "UNKNOWN",
+  "top_findings": []
+}

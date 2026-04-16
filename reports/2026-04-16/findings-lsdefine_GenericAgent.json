@@ -1,0 +1,23 @@
+{
+  "repo": "lsdefine/GenericAgent",
+  "categories": "ai",
+  "critical": 3,
+  "high": 6,
+  "medium": 6,
+  "low": 3,
+  "risk_level": "CRITICAL",
+  "top_findings": [
+    {
+      "severity": "CRITICAL",
+      "summary": "injection / RCE"
+    },
+    {
+      "severity": "CRITICAL",
+      "summary": "injection / RCE"
+    },
+    {
+      "severity": "CRITICAL",
+      "summary": "injection"
+    }
+  ]
+}

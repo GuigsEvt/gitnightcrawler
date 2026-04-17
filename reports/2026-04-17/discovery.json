@@ -1,0 +1,163 @@
+{
+  "run_date": "2026-04-17T00:01:55.959313+00:00",
+  "total_main_candidates": 184,
+  "total_marketing_candidates": 50,
+  "scored_main": 176,
+  "scored_marketing": 47,
+  "top_repos": [
+    {
+      "full_name": "HKUDS/nanobot",
+      "description": "\"\ud83d\udc08 nanobot: The Ultra-Lightweight Personal AI Agent\"",
+      "url": "https://github.com/HKUDS/nanobot",
+      "stars": 39804,
+      "forks": 6984,
+      "open_issues": 944,
+      "language": "Python",
+      "license": "mit",
+      "created_at": "2026-02-01T07:16:15Z",
+      "pushed_at": "2026-04-16T19:15:34Z",
+      "momentum": {
+        "momentum_score": 177.46,
+        "stars_per_day": 537.89,
+        "recency_boost": 1.0,
+        "age_days": 74,
+        "days_since_push": 0
+      }
+    },
+    {
+      "full_name": "MemPalace/mempalace",
+      "description": "The best-benchmarked open-source AI memory system. And it's free.",
+      "url": "https://github.com/MemPalace/mempalace",
+      "stars": 47121,
+      "forks": 6154,
+      "open_issues": 380,
+      "language": "Python",
+      "license": "mit",
+      "created_at": "2026-04-05T01:12:07Z",
+      "pushed_at": "2026-04-16T19:26:35Z",
+      "momentum": {
+        "momentum_score": 176.77,
+        "stars_per_day": 4283.73,
+        "recency_boost": 1.0,
+        "age_days": 11,
+        "days_since_push": 0
+      }
+    },
+    {
+      "full_name": "safishamsi/graphify",
+      "description": "AI coding assistant skill (Claude Code, Codex, OpenCode, Cursor, Gemini CLI, GitHub Copilot CLI, OpenClaw, Factory Droid, Trae, Google Antig",
+      "url": "https://github.com/safishamsi/graphify",
+      "stars": 28252,
+      "forks": 3077,
+      "open_issues": 123,
+      "language": "Python",
+      "license": "mit",
+      "created_at": "2026-04-03T15:49:07Z",
+      "pushed_at": "2026-04-16T06:25:55Z",
+      "momentum": {
+        "momentum_score": 174.76,
+        "stars_per_day": 2173.23,
+        "recency_boost": 1.0,
+        "age_days": 13,
+        "days_since_push": 0
+      }
+    },
+    {
+      "full_name": "moltis-org/moltis",
+      "description": "A secure persistent personal agent server in Rust. One binary, sandboxed execution, multi-provider LLMs, voice, memory, Telegram, WhatsApp, ",
+      "url": "https://github.com/moltis-org/moltis",
+      "stars": 2562,
+      "forks": 305,
+      "open_issues": 76,
+      "language": "Rust",
+      "license": "mit",
+      "created_at": "2026-01-29T19:36:31Z",
+      "pushed_at": "2026-04-16T22:49:48Z",
+      "momentum": {
+        "momentum_score": 168.25,
+        "stars_per_day": 33.27,
+        "recency_boost": 1.0,
+        "age_days": 77,
+        "days_since_push": 0
+      }
+    },
+    {
+      "full_name": "FlowiseAI/Flowise",
+      "description": "Build AI Agents, Visually",
+      "url": "https://github.com/FlowiseAI/Flowise",
+      "stars": 51987,
+      "forks": 24160,
+      "open_issues": 813,
+      "language": "TypeScript",
+      "license": "other",
+      "created_at": "2023-03-31T12:23:09Z",
+      "pushed_at": "2026-04-16T23:23:07Z",
+      "momentum": {
+        "momentum_score": 166.24,
+        "stars_per_day": 46.75,
+        "recency_boost": 1.0,
+        "age_days": 1112,
+        "days_since_push": 0
+      }
+    }
+  ],
+  "marketing_repos": [
+    {
+      "full_name": "astronomer/agents",
+      "description": "AI agent tooling for data engineering workflows.",
+      "url": "https://github.com/astronomer/agents",
+      "stars": 323,
+      "forks": 40,
+      "open_issues": 13,
+      "language": "Python",
+      "license": "apache-2.0",
+      "created_at": "2026-01-13T16:23:31Z",
+      "pushed_at": "2026-04-16T21:12:40Z",
+      "momentum": {
+        "momentum_score": 127.88,
+        "stars_per_day": 3.47,
+        "recency_boost": 1.0,
+        "age_days": 93,
+        "days_since_push": 0
+      }
+    },
+    {
+      "full_name": "shankar0123/certctl",
+      "description": "Self-hosted certificate lifecycle automation platform. Any CA, any server, zero human intervention. Full REST API, web dashboard, and agent-",
+      "url": "https://github.com/shankar0123/certctl",
+      "stars": 298,
+      "forks": 18,
+      "open_issues": 6,
+      "language": "Go",
+      "license": "other",
+      "created_at": "2026-03-14T12:22:29Z",
+      "pushed_at": "2026-04-16T23:49:47Z",
+      "momentum": {
+        "momentum_score": 113.1,
+        "stars_per_day": 9.03,
+        "recency_boost": 1.0,
+        "age_days": 33,
+        "days_since_push": 0
+      }
+    },
+    {
+      "full_name": "redhat-community-ai-tools/UnifAI",
+      "description": "Production-grade multi-agent orchestration engine. Compose agentic workflows from a pluggable catalog of Agents, LLMs, tools, and retrievers",
+      "url": "https://github.com/redhat-community-ai-tools/UnifAI",
+      "stars": 35,
+      "forks": 13,
+      "open_issues": 17,
+      "language": "Python",
+      "license": "apache-2.0",
+      "created_at": "2025-11-20T14:34:50Z",
+      "pushed_at": "2026-04-16T14:24:47Z",
+      "momentum": {
+        "momentum_score": 112.05,
+        "stars_per_day": 0.24,
+        "recency_boost": 1.0,
+        "age_days": 147,
+        "days_since_push": 0
+      }
+    }
+  ]
+}

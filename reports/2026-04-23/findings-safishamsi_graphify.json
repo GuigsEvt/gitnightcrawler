@@ -1,0 +1,23 @@
+{
+  "repo": "safishamsi/graphify",
+  "categories": "ai|actions|mobile",
+  "critical": 0,
+  "high": 3,
+  "medium": 2,
+  "low": 3,
+  "risk_level": "MEDIUM",
+  "top_findings": [
+    {
+      "severity": "HIGH",
+      "summary": "SSRF"
+    },
+    {
+      "severity": "HIGH",
+      "summary": "Injection"
+    },
+    {
+      "severity": "HIGH",
+      "summary": "Supply Chain"
+    }
+  ]
+}

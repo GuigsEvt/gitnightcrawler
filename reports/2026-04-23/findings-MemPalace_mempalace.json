@@ -1,0 +1,19 @@
+{
+  "repo": "MemPalace/mempalace",
+  "categories": "ai|actions",
+  "critical": 0,
+  "high": 2,
+  "medium": 2,
+  "low": 3,
+  "risk_level": "MEDIUM",
+  "top_findings": [
+    {
+      "severity": "HIGH",
+      "summary": "injection"
+    },
+    {
+      "severity": "HIGH",
+      "summary": "injection / arbitrary code execution"
+    }
+  ]
+}

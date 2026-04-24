@@ -1,0 +1,10 @@
+{
+  "repo": "safishamsi/graphify",
+  "categories": "ai|actions|mobile",
+  "critical": 0,
+  "high": 0,
+  "medium": 3,
+  "low": 4,
+  "risk_level": "LOW",
+  "top_findings": []
+}

@@ -1,0 +1,163 @@
+{
+  "run_date": "2026-04-24T00:01:57.440378+00:00",
+  "total_main_candidates": 186,
+  "total_marketing_candidates": 41,
+  "scored_main": 178,
+  "scored_marketing": 38,
+  "top_repos": [
+    {
+      "full_name": "HKUDS/nanobot",
+      "description": "\"\ud83d\udc08 nanobot: The Ultra-Lightweight Personal AI Agent\"",
+      "url": "https://github.com/HKUDS/nanobot",
+      "stars": 40675,
+      "forks": 7145,
+      "open_issues": 890,
+      "language": "Python",
+      "license": "mit",
+      "created_at": "2026-02-01T07:16:15Z",
+      "pushed_at": "2026-04-23T20:17:24Z",
+      "momentum": {
+        "momentum_score": 177.53,
+        "stars_per_day": 502.16,
+        "recency_boost": 1.0,
+        "age_days": 81,
+        "days_since_push": 0
+      }
+    },
+    {
+      "full_name": "MemPalace/mempalace",
+      "description": "The best-benchmarked open-source AI memory system. And it's free.",
+      "url": "https://github.com/MemPalace/mempalace",
+      "stars": 49260,
+      "forks": 6457,
+      "open_issues": 483,
+      "language": "Python",
+      "license": "mit",
+      "created_at": "2026-04-05T01:12:07Z",
+      "pushed_at": "2026-04-23T23:51:42Z",
+      "momentum": {
+        "momentum_score": 176.91,
+        "stars_per_day": 2736.67,
+        "recency_boost": 1.0,
+        "age_days": 18,
+        "days_since_push": 0
+      }
+    },
+    {
+      "full_name": "safishamsi/graphify",
+      "description": "AI coding assistant skill (Claude Code, Codex, OpenCode, Cursor, Gemini CLI, GitHub Copilot CLI, OpenClaw, Factory Droid, Trae, Google Antig",
+      "url": "https://github.com/safishamsi/graphify",
+      "stars": 33754,
+      "forks": 3739,
+      "open_issues": 161,
+      "language": "Python",
+      "license": "mit",
+      "created_at": "2026-04-03T15:49:07Z",
+      "pushed_at": "2026-04-23T19:09:10Z",
+      "momentum": {
+        "momentum_score": 175.31,
+        "stars_per_day": 1687.7,
+        "recency_boost": 1.0,
+        "age_days": 20,
+        "days_since_push": 0
+      }
+    },
+    {
+      "full_name": "nextlevelbuilder/goclaw",
+      "description": "GoClaw - GoClaw is OpenClaw rebuilt in Go \u2014 with multi-tenant isolation, 5-layer security, and native concurrency. Deploy AI agent teams at ",
+      "url": "https://github.com/nextlevelbuilder/goclaw",
+      "stars": 2903,
+      "forks": 757,
+      "open_issues": 214,
+      "language": "Go",
+      "license": "other",
+      "created_at": "2026-02-22T07:26:36Z",
+      "pushed_at": "2026-04-23T23:40:52Z",
+      "momentum": {
+        "momentum_score": 172.29,
+        "stars_per_day": 48.38,
+        "recency_boost": 1.0,
+        "age_days": 60,
+        "days_since_push": 0
+      }
+    },
+    {
+      "full_name": "moltis-org/moltis",
+      "description": "A secure persistent personal agent server in Rust. One binary, sandboxed execution, multi-provider LLMs, voice, memory, Telegram, WhatsApp, ",
+      "url": "https://github.com/moltis-org/moltis",
+      "stars": 2597,
+      "forks": 309,
+      "open_issues": 93,
+      "language": "Rust",
+      "license": "mit",
+      "created_at": "2026-01-29T19:36:31Z",
+      "pushed_at": "2026-04-23T23:19:50Z",
+      "momentum": {
+        "momentum_score": 168.29,
+        "stars_per_day": 30.92,
+        "recency_boost": 1.0,
+        "age_days": 84,
+        "days_since_push": 0
+      }
+    }
+  ],
+  "marketing_repos": [
+    {
+      "full_name": "astronomer/agents",
+      "description": "AI agent tooling for data engineering workflows.",
+      "url": "https://github.com/astronomer/agents",
+      "stars": 337,
+      "forks": 42,
+      "open_issues": 14,
+      "language": "Python",
+      "license": "apache-2.0",
+      "created_at": "2026-01-13T16:23:31Z",
+      "pushed_at": "2026-04-23T14:48:39Z",
+      "momentum": {
+        "momentum_score": 129.81,
+        "stars_per_day": 3.37,
+        "recency_boost": 1.0,
+        "age_days": 100,
+        "days_since_push": 0
+      }
+    },
+    {
+      "full_name": "bitrouter/bitrouter",
+      "description": "The agentic proxy for modern agent runtimes. Smart, safe, agent-controlled routing across LLMs, tools, and agents.",
+      "url": "https://github.com/bitrouter/bitrouter",
+      "stars": 76,
+      "forks": 1,
+      "open_issues": 14,
+      "language": "Rust",
+      "license": "apache-2.0",
+      "created_at": "2026-03-06T20:04:01Z",
+      "pushed_at": "2026-04-23T18:14:48Z",
+      "momentum": {
+        "momentum_score": 118.19,
+        "stars_per_day": 1.58,
+        "recency_boost": 1.0,
+        "age_days": 48,
+        "days_since_push": 0
+      }
+    },
+    {
+      "full_name": "redhat-community-ai-tools/UnifAI",
+      "description": "Production-grade multi-agent orchestration engine. Compose agentic workflows from a pluggable catalog of Agents, LLMs, tools, and retrievers",
+      "url": "https://github.com/redhat-community-ai-tools/UnifAI",
+      "stars": 35,
+      "forks": 15,
+      "open_issues": 17,
+      "language": "Python",
+      "license": "apache-2.0",
+      "created_at": "2025-11-20T14:34:50Z",
+      "pushed_at": "2026-04-23T19:26:51Z",
+      "momentum": {
+        "momentum_score": 111.98,
+        "stars_per_day": 0.23,
+        "recency_boost": 1.0,
+        "age_days": 154,
+        "days_since_push": 0
+      }
+    }
+  ]
+}

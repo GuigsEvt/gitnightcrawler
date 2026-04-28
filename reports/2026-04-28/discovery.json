@@ -1,0 +1,163 @@
+{
+  "run_date": "2026-04-28T00:02:00.958272+00:00",
+  "total_main_candidates": 201,
+  "total_marketing_candidates": 48,
+  "scored_main": 189,
+  "scored_marketing": 45,
+  "top_repos": [
+    {
+      "full_name": "HKUDS/nanobot",
+      "description": "\"\ud83d\udc08 nanobot: The Ultra-Lightweight Personal AI Agent\"",
+      "url": "https://github.com/HKUDS/nanobot",
+      "stars": 41072,
+      "forks": 7204,
+      "open_issues": 889,
+      "language": "Python",
+      "license": "mit",
+      "created_at": "2026-02-01T07:16:15Z",
+      "pushed_at": "2026-04-27T12:48:27Z",
+      "momentum": {
+        "momentum_score": 177.55,
+        "stars_per_day": 483.2,
+        "recency_boost": 1.0,
+        "age_days": 85,
+        "days_since_push": 0
+      }
+    },
+    {
+      "full_name": "MemPalace/mempalace",
+      "description": "The best-benchmarked open-source AI memory system. And it's free.",
+      "url": "https://github.com/MemPalace/mempalace",
+      "stars": 50014,
+      "forks": 6563,
+      "open_issues": 495,
+      "language": "Python",
+      "license": "mit",
+      "created_at": "2026-04-05T01:12:07Z",
+      "pushed_at": "2026-04-27T23:53:42Z",
+      "momentum": {
+        "momentum_score": 176.96,
+        "stars_per_day": 2273.36,
+        "recency_boost": 1.0,
+        "age_days": 22,
+        "days_since_push": 0
+      }
+    },
+    {
+      "full_name": "safishamsi/graphify",
+      "description": "AI coding assistant skill (Claude Code, Codex, OpenCode, Cursor, Gemini CLI, GitHub Copilot CLI, OpenClaw, Factory Droid, Trae, Google Antig",
+      "url": "https://github.com/safishamsi/graphify",
+      "stars": 36449,
+      "forks": 4048,
+      "open_issues": 190,
+      "language": "Python",
+      "license": "mit",
+      "created_at": "2026-04-03T15:49:07Z",
+      "pushed_at": "2026-04-27T23:56:55Z",
+      "momentum": {
+        "momentum_score": 175.54,
+        "stars_per_day": 1518.71,
+        "recency_boost": 1.0,
+        "age_days": 24,
+        "days_since_push": 0
+      }
+    },
+    {
+      "full_name": "heygen-com/hyperframes",
+      "description": "Write HTML. Render video. Built for agents.",
+      "url": "https://github.com/heygen-com/hyperframes",
+      "stars": 11953,
+      "forks": 1032,
+      "open_issues": 41,
+      "language": "TypeScript",
+      "license": "apache-2.0",
+      "created_at": "2026-03-10T01:51:06Z",
+      "pushed_at": "2026-04-28T00:00:12Z",
+      "momentum": {
+        "momentum_score": 171.75,
+        "stars_per_day": 249.02,
+        "recency_boost": 1.0,
+        "age_days": 48,
+        "days_since_push": 0
+      }
+    },
+    {
+      "full_name": "nesquena/hermes-webui",
+      "description": "Hermes WebUI: The best way to use Hermes Agent from the web or from your phone!",
+      "url": "https://github.com/nesquena/hermes-webui",
+      "stars": 4581,
+      "forks": 560,
+      "open_issues": 80,
+      "language": "Python",
+      "license": "mit",
+      "created_at": "2026-03-30T21:50:12Z",
+      "pushed_at": "2026-04-28T00:00:13Z",
+      "momentum": {
+        "momentum_score": 169.97,
+        "stars_per_day": 163.61,
+        "recency_boost": 1.0,
+        "age_days": 28,
+        "days_since_push": 0
+      }
+    }
+  ],
+  "marketing_repos": [
+    {
+      "full_name": "astronomer/agents",
+      "description": "AI agent tooling for data engineering workflows.",
+      "url": "https://github.com/astronomer/agents",
+      "stars": 345,
+      "forks": 44,
+      "open_issues": 13,
+      "language": "Python",
+      "license": "apache-2.0",
+      "created_at": "2026-01-13T16:23:31Z",
+      "pushed_at": "2026-04-27T19:36:41Z",
+      "momentum": {
+        "momentum_score": 126.86,
+        "stars_per_day": 3.32,
+        "recency_boost": 1.0,
+        "age_days": 104,
+        "days_since_push": 0
+      }
+    },
+    {
+      "full_name": "bitrouter/bitrouter",
+      "description": "The agentic proxy for modern agent runtimes. Smart, safe, agent-controlled routing across LLMs, tools, and agents.",
+      "url": "https://github.com/bitrouter/bitrouter",
+      "stars": 77,
+      "forks": 1,
+      "open_issues": 19,
+      "language": "Rust",
+      "license": "apache-2.0",
+      "created_at": "2026-03-06T20:04:01Z",
+      "pushed_at": "2026-04-27T14:31:18Z",
+      "momentum": {
+        "momentum_score": 120.13,
+        "stars_per_day": 1.48,
+        "recency_boost": 1.0,
+        "age_days": 52,
+        "days_since_push": 0
+      }
+    },
+    {
+      "full_name": "moltis-org/moltis",
+      "description": "A secure persistent personal agent server in Rust. One binary, sandboxed execution, multi-provider LLMs, voice, memory, Telegram, WhatsApp, ",
+      "url": "https://github.com/moltis-org/moltis",
+      "stars": 2615,
+      "forks": 309,
+      "open_issues": 75,
+      "language": "Rust",
+      "license": "mit",
+      "created_at": "2026-01-29T19:36:31Z",
+      "pushed_at": "2026-04-27T22:41:26Z",
+      "momentum": {
+        "momentum_score": 117.0,
+        "stars_per_day": 29.72,
+        "recency_boost": 1.0,
+        "age_days": 88,
+        "days_since_push": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,163 @@
+{
+  "run_date": "2026-10-30T09:22:29.528108+00:00",
+  "total_main_candidates": 202,
+  "total_marketing_candidates": 50,
+  "scored_main": 191,
+  "scored_marketing": 47,
+  "top_repos": [
+    {
+      "full_name": "nightly-labs/openbot",
+      "description": "A local-first desktop workspace for persistent AI teammates. Run Codex, Claude, and Grok with dedicated workspaces, task queues, file sharin",
+      "url": "https://github.com/nightly-labs/openbot",
+      "stars": 4097,
+      "forks": 374,
+      "open_issues": 385,
+      "language": "TypeScript",
+      "license": "other",
+      "created_at": "2026-08-12T21:32:03Z",
+      "pushed_at": "2026-10-30T09:20:46Z",
+      "momentum": {
+        "momentum_score": 168.85,
+        "stars_per_day": 52.53,
+        "recency_boost": 1.0,
+        "age_days": 78,
+        "days_since_push": 0
+      }
+    },
+    {
+      "full_name": "Sidiora-Labs/paxeer-monorepo",
+      "description": "Paxeer X is a Distributed HyperState Machine for payments, code execution and intent routing. Designed for Machines and the Users operating ",
+      "url": "https://github.com/Sidiora-Labs/paxeer-monorepo",
+      "stars": 544,
+      "forks": 84,
+      "open_issues": 109,
+      "language": "Go",
+      "license": "apache-2.0",
+      "created_at": "2026-08-14T19:56:00Z",
+      "pushed_at": "2026-10-30T09:21:13Z",
+      "momentum": {
+        "momentum_score": 164.8,
+        "stars_per_day": 7.16,
+        "recency_boost": 1.0,
+        "age_days": 76,
+        "days_since_push": 0
+      }
+    },
+    {
+      "full_name": "omnigent-ai/omnigent",
+      "description": "Omnigent is an open-source AI agent framework and meta-harness: orchestrate Claude Code, Codex, Cursor, Pi, and custom agents \u2014 swap harness",
+      "url": "https://github.com/omnigent-ai/omnigent",
+      "stars": 11127,
+      "forks": 1830,
+      "open_issues": 2633,
+      "language": "Python",
+      "license": "apache-2.0",
+      "created_at": "2026-06-11T12:18:13Z",
+      "pushed_at": "2026-10-30T09:11:06Z",
+      "momentum": {
+        "momentum_score": 164.48,
+        "stars_per_day": 79.48,
+        "recency_boost": 1.0,
+        "age_days": 140,
+        "days_since_push": 0
+      }
+    },
+    {
+      "full_name": "xerj-org/xerj",
+      "description": "AI search engine and MCP server for bots and agents. One Rust binary indexes code, docs, logs, JSONL/CSV and PDFs for BM25 full-text, vector",
+      "url": "https://github.com/xerj-org/xerj",
+      "stars": 17613,
+      "forks": 1356,
+      "open_issues": 66,
+      "language": "Rust",
+      "license": "apache-2.0",
+      "created_at": "2026-06-30T04:32:45Z",
+      "pushed_at": "2026-10-30T09:09:44Z",
+      "momentum": {
+        "momentum_score": 163.5,
+        "stars_per_day": 144.37,
+        "recency_boost": 1.0,
+        "age_days": 122,
+        "days_since_push": 0
+      }
+    },
+    {
+      "full_name": "vllm-project/vllm",
+      "description": "A high-throughput and memory-efficient inference and serving engine for LLMs",
+      "url": "https://github.com/vllm-project/vllm",
+      "stars": 95896,
+      "forks": 24180,
+      "open_issues": 9638,
+      "language": "Python",
+      "license": "apache-2.0",
+      "created_at": "2023-02-09T11:23:20Z",
+      "pushed_at": "2026-10-30T09:21:14Z",
+      "momentum": {
+        "momentum_score": 162.44,
+        "stars_per_day": 70.62,
+        "recency_boost": 1.0,
+        "age_days": 1358,
+        "days_since_push": 0
+      }
+    }
+  ],
+  "marketing_repos": [
+    {
+      "full_name": "jgassens/ChemDraft",
+      "description": "Open-source chemical drawing app for macOS and Windows, with plugins and AI-agent tools (MCP server, CLI, agent skill)",
+      "url": "https://github.com/jgassens/ChemDraft",
+      "stars": 42,
+      "forks": 12,
+      "open_issues": 34,
+      "language": "TypeScript",
+      "license": "apache-2.0",
+      "created_at": "2026-05-29T21:51:04Z",
+      "pushed_at": "2026-10-29T21:36:43Z",
+      "momentum": {
+        "momentum_score": 112.28,
+        "stars_per_day": 0.27,
+        "recency_boost": 1.0,
+        "age_days": 153,
+        "days_since_push": 0
+      }
+    },
+    {
+      "full_name": "XAGI-Lab/melra",
+      "description": "Open-source local MCP runtime that checks AI-agent tool calls, gates risky actions on approval, verifies results, and avoids blind retries a",
+      "url": "https://github.com/XAGI-Lab/melra",
+      "stars": 13,
+      "forks": 6,
+      "open_issues": 26,
+      "language": "TypeScript",
+      "license": "agpl-3.0",
+      "created_at": "2026-07-28T10:12:28Z",
+      "pushed_at": "2026-10-30T08:39:18Z",
+      "momentum": {
+        "momentum_score": 111.41,
+        "stars_per_day": 0.14,
+        "recency_boost": 1.0,
+        "age_days": 93,
+        "days_since_push": 0
+      }
+    },
+    {
+      "full_name": "baramundisoftware/bConnect-MCP",
+      "description": "MCP servers for baramundi bConnect REST API ",
+      "url": "https://github.com/baramundisoftware/bConnect-MCP",
+      "stars": 17,
+      "forks": 0,
+      "open_issues": 29,
+      "language": "TypeScript",
+      "license": "mit",
+      "created_at": "2026-06-09T12:10:32Z",
+      "pushed_at": "2026-10-30T09:20:12Z",
+      "momentum": {
+        "momentum_score": 111.28,
+        "stars_per_day": 0.12,
+        "recency_boost": 1.0,
+        "age_days": 142,
+        "days_since_push": 0
+      }
+    }
+  ]
+}

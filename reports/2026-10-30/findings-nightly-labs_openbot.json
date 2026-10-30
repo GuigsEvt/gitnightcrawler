@@ -1,0 +1,19 @@
+{
+  "repo": "nightly-labs/openbot",
+  "categories": "general",
+  "critical": 0,
+  "high": 2,
+  "medium": 0,
+  "low": 0,
+  "risk_level": "LOW",
+  "top_findings": [
+    {
+      "severity": "HIGH",
+      "summary": "Insecure defaults / AI agent safety"
+    },
+    {
+      "severity": "HIGH",
+      "summary": "CI/CD / AI-agent workflow / self-hosted runner persistence"
+    }
+  ]
+}

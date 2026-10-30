@@ -1,0 +1,133 @@
+All five analysis agents have completed. The results cross-validate well (two agents independently found the same X-Forwarded-For issue, and the Electron and supply-chain agents converged on the runtime-integrity gap). Here is the consolidated report.
+
+# Security Audit: nightly-labs/openbot
+
+## Repository Overview
+
+OpenBot is a local-first, multi-agent desktop workspace (Electron) for running AI coding agents — Codex, Claude, Grok, Gemini, Cursor, and others — side by side, with team features, remote access via a self-hostable "Signal" relay (WebRTC + coturn), messaging integrations (Slack/Discord/Telegram), a mobile companion app, and hosted-site publishing. End-to-end security between clients and hosts is built on ephemeral Ed25519 identities with DTLS-fingerprint-bound transcripts, so the relay and account service are untrusted carriers by design.
+
+- **Tech stack:** TypeScript throughout; Electron + SolidJS desktop app; Bun monorepo (workspaces + catalog); Cloudflare Workers (auth-api, site-router) with D1/R2; a Bun-based Signal relay behind nginx with coturn; Expo/React Native mobile app; Effect, jose, zod, @noble crypto.
+- **Maturity:** Growing-to-mature. v0.54.0, ~1,840 locked dependencies, extensive CI (15 workflows), release signing/notarization/provenance, an AI review gate, and consistently defensive code. Security engineering quality is well above average for a project of this age.
+- **Categories detected:** general (with substantial AI-agent, Electron, CI/CD, and crypto surfaces).
+
+## Critical & High Severity Findings
+
+### H1 — New agents default to Full access + auto-approval + Computer Use (prompt injection → unattended command execution)
+- **Severity:** HIGH
+- **Category:** Insecure defaults / AI agent safety
+- **Location:** `packages/contracts/src/ipc-agents.ts:38` (`DEFAULT_AGENT_ACCESS = "full"`), `packages/contracts/src/ipc-approvals.ts:81-84` (`defaultAutoApprove: true`), `src/backend/agent-store.ts:1660,2124`, `src/backend/agent/attention-registry.ts:692-705`
+- **Description:** Out of the box, a newly created agent gets unrestricted filesystem/network access, Computer Use enabled, and `defaultAutoApprove: true`. The auto-approve path (`#answerWithoutAsking`) silently accepts every eligible approval class — permission widening, built-in tools, MCP consent, and hosted-site publish/replace/delete — with no approval card or OS notification.
+- **Impact:** Any prompt injection in content an agent reads (web page, routed Slack/Telegram message, repository file) becomes unattended arbitrary command execution on the user's machine, plus hosted-site tampering. This is the dominant risk in the codebase because it turns every other injection surface into RCE-equivalent.
+- **Mitigations present:** corrupt preference file fails closed to deny-all; workspace-sandboxed agents always ask; browser takeover has a separate never-auto-answered gate; actions remain visible in the timeline; grants are local-only.
+- **Fix:** Ship `defaultAutoApprove: false`, or default new agents to `access: "workspace"`, making Full-access-with-auto-approve an explicit per-agent opt-in with a warning.
+- **Confidence:** High (behavior traced end-to-end; clearly a deliberate product choice, but a dangerous default).
+
+### H2 — AI reviewer (NorbiAI) on a persistent self-hosted runner: allowed Bash prefixes don't deny shell redirection
+- **Severity:** HIGH (impact) / exploitability medium
+- **Category:** CI/CD / AI-agent workflow / self-hosted runner persistence
+- **Location:** `.github/workflows/norbiai-review.yml:119` (`runs-on: [self-hosted]`), `:661-666` (allow/deny lists), `:680-688` (`--setting-sources user`)
+- **Description:** The reviewer is fed attacker-influenced content (PR title, body, full diff) with `Bash(git diff:*)`, `Bash(git show:*)` etc. allowed. The deny list blocks `*--output*` and `*--no-index*` but **not output redirection**: `git show HEAD:payload > ~/.claude/settings.json` still matches the allowed prefix and writes fully attacker-controlled bytes. Because the run uses `--setting-sources user` on a non-ephemeral self-hosted runner, a written `~/.claude/settings.json` hook executes arbitrary code on every subsequent review run — outside the Claude sandbox, with the runner's credentials and a sibling-step `GITHUB_TOKEN` holding `pull-requests: write` + `statuses: write`.
+- **Impact:** Prompt injection → persistent compromise of the review runner → compromise of all future reviews and the merge gate.
+- **Fix:** Add `Bash(*>*)`/`Bash(*>>*)` (and pipe/`tee`) to the deny list; point `HOME` at a per-run throwaway directory; drop `--setting-sources user`; move to ephemeral runners.
+- **Confidence:** Medium (depends on whether the deployed Claude Code version auto-approves redirects under prefix rules; nothing in the workflow blocks it if so).
+
+## Medium & Low Severity Findings
+
+### Medium
+
+**M1 — Provider runtimes installable without hash or signature verification** — supply chain. `src/main/provider-runtime-releases.ts:20-26,75-142`, `src/main/acp-registry-catalog.ts:23-27`, `src/main/acp-registry-install.ts:84`. Grok (x.ai publishes no hash) and any ACP-registry `binary` entry whose catalog omits `sha256` install on TLS trust alone; where hashes exist (Pi via GitHub release metadata, Muse via Meta's channel manifest) they come from the same origin as the artifact, so they prove transport integrity only. Compromise of `cdn.agentclientprotocol.com` or an upstream channel yields native code execution on auto-update. Mitigations: redirect/size/time caps, archive hardening, realpath confinement, a remote kill-switch blocklist, and hash pinning for Codex/Claude/Bitwarden/1Password. Fix: make `sha256` mandatory in the registry schema, verify publisher signatures (GitHub attestations, codesign/Authenticode) where available, sign the registry. Confidence: high.
+
+**M2 — NorbiAI merge gate is decided by unverified model output** — CI / prompt injection. `.github/workflows/norbiai-review.yml:973-1017`. The required commit status passes when the model's own markdown contains no P0/P1 findings; attacker text in the diff/comments can steer the model to omit findings. Strong mitigations exist (untrusted-content labeling, base-commit prompts, blind-review detection) but the decision is still LLM text. Fix: keep mandatory human review in branch protection; treat the status as advisory. Confidence: high.
+
+**M3 — Auth sessions never expire** — session management. `apps/auth-api/src/server/session-policy.ts:5` (expiry ≈ year 275760), cookie `Max-Age=34560000` (`browser-api.ts:195`). A once-exfiltrated token is valid until manually revoked. Tokens are hashed at rest and revocable; fix with an inactivity cutoff (90–180 days on the already-maintained `last_used_at`). Confidence: high.
+
+**M4 — `pin` job runs dependency code with a persisted `contents: write` token** — CI supply chain. `.github/workflows/remote-desktop-runtime.yml:575-625`. The only checkout in the file without `persist-credentials: false`, followed by `bun install` + scripts before `git push`; a compromised pinned dependency can steal the token. The repo already uses the safe pattern elsewhere (`release.yml:1253-1263`). Fix: `persist-credentials: false` + push via `gh api`. Confidence: high.
+
+### Low
+
+| # | Finding | Location | Note |
+|---|---------|----------|------|
+| L1 | XFF parser takes leftmost (client-controlled) hop when `REMOTE_TRUST_PROXY=true` | `remote/api/src/app.ts:407-415` | Shipped nginx overwrites XFF so first-party deploy is safe; self-hosters behind appending proxies lose rate limiting. Take rightmost hop. Found independently by two agents. |
+| L2 | Initial-ticket jti replay cache is in-memory only | `remote/api/src/signal-service.ts:329,1221-1258` | Mitigated by 3-min post-restart re-validation and E2E key pinning; metadata abuse only. |
+| L3 | Metrics bearer token compared with `!==` | `remote/api/src/index.ts:372-376` | Only timing-unsafe compare in the codebase; loopback-bound. Use `timingSafeEqual`. |
+| L4 | Internal HMAC webhooks replayable within 5-min window | `remote/api/src/tokens.ts:609-622`, `apps/auth-api/src/server/remote-control-plane.ts:3247-3266` | All replayable events are idempotent revocations (fail-safe). |
+| L5 | TURN relay not denied to the server's own public IP | `remote/coturn/turnserver.conf:17-32` | RFC1918/loopback/CGN denied; add `denied-peer-ip=$TURN_PUBLIC_IP`. |
+| L6 | Push-seal cipher takes caller-supplied nonce | `packages/team-client/src/live-activity-seal.ts:46-62` | All callers pass random nonces today; generate inside the seal function. |
+| L7 | Host-key handover chain lacks expiry/monotonicity | `packages/team-client/src/host-key-handover.ts:29-48` | Historical host-key theft permits minting valid handovers forever; enforce increasing `issuedAt`. |
+| L8 | TOFU first contact for host keys via account directory | `packages/team-client/src/remote-directory.ts:502-503` | Standard trade-off; invite URLs carry fingerprints out-of-band. |
+| L9 | CLA workflow (`pull_request_target`) holds `contents: write` repo-wide | `.github/workflows/cla.yml:16-20` | No injection path found in `scripts/cla.ts`; scope token to the signatures branch. |
+| L10 | ACP registry npm installs run lifecycle scripts | `src/main/acp-registry-install.ts:113-118` | Add `--ignore-scripts`. |
+| L11 | GitHub token and agent API keys materialized as plaintext files for CLI compat | `src/main/github-connector-service.ts:924-945`, `src/backend/agent-api-keys.ts:30-80` | `0o600`/`0o700`, redaction-registered, cleaned on disconnect — accepted risk. |
+| L12 | Production secret ciphertexts committed (dotenvx) | `remote/.env.production`, `apps/auth-api/.env.production` | Verified never plaintext in history; `.env.keys` untracked. The dotenvx private key is a crown jewel — one leak decrypts the full historical inventory. |
+| L13 | `@norbert_bodziony/bloub` exempt from 3-day npm release quarantine; `effect` exemption outlived its migration | `bunfig.toml:10` | Single-maintainer npm account = immediate-install SPOF. Remove exemptions / require provenance. |
+| L14 | Remote-stack Docker bases pinned by tag, not digest | `remote/api/Dockerfile:1,17`, `remote/coturn/Dockerfile:1` | Main `docker/Dockerfile` is digest-pinned — mirror it. |
+| L15 | `curl \| sudo bash` server installer | `scripts/install-server.sh:4` | AppImage is SHA-512-verified; manifest shares the trust root. Offer a signed-manifest alternative. |
+
+### Info (selected)
+- `AUTH_EXPOSE_DEVELOPMENT_CODE` is a full auth bypass if ever flipped (dev sign-in code derivable from client-chosen challengeId) — pinned `"false"` in all environments; gate it additionally on a dev-origin check (`apps/auth-api/src/server/auth-service.ts:160-162,882-888`).
+- `SERVER_CLAIMS_ADMIN_TOKEN` can mint sign-in claims for any email — constant-time compared and rate-limited, but consider Cloudflare Access (`apps/auth-api/src/server/admin-token.ts`).
+- `devTools: true` in the production main window (`src/main/main-window.ts:207`); low value given sandboxing, but convention is `!app.isPackaged`.
+- OAuth `state` reusable within its 10-min TTL (provider code is single-use, so practical abuse is nil); Ed25519 secret keys not zeroized on close (outside the JS threat model); rate-window map evicts oldest at 100k keys.
+
+## Supply Chain Analysis
+
+Exceptionally strong hygiene. All 1,840 locked packages resolve from `registry.npmjs.org` with sha512 integrity; zero git/URL dependencies; exact pinning enforced (`bunfig.toml: exact = true`); install scripts denied except a 3-package commented allowlist (`electron-winstaller`, `esbuild`, `workerd`); a 3-day `minimumReleaseAge` quarantine guards fresh malicious releases. All third-party GitHub Actions are SHA-pinned (14/14). Native runtimes (14 of them), vendored Sunshine/Moonlight patches, and skills are hash-pinned in committed lock files, with a remote kill-switch blocklist (`provider-runtime-blocklist.json`). The main Dockerfile is digest-pinned, non-root, seccomp-profiled. Electron fuses are a model configuration (runAsNode off, ASAR integrity on, onlyLoadAppFromAsar); Windows builds force code signing with publisher-CN pinning.
+
+Weak spots: the dynamic provider-runtime update path (M1), the quarantine exemptions for `bloub`/`effect` (L13), tag-pinned remote Docker bases (L14), and a reliance on prerelease trains (solid-js 2.0-rc, Kobalte alpha, `tsrs` dated dev build) — contained by exact pins and lockfile hashes. No typosquats, no known-vulnerable pins identified with confidence (`ws@8.22.0` is past CVE-2024-37890); recommend adding `bun audit`/OSV scanning to CI for authoritative coverage.
+
+## Code Quality Assessment
+
+- **Architecture:** Clean monorepo separation (desktop `src/`, workers `apps/`, relay `remote/`, shared `packages/contracts`). Trust boundaries are explicit and unusually well-engineered: typed IPC with sender-frame verification enforced by a static test (`ipc-channel-coverage.test.ts`), three deliberately-separated trust domains in the remote plane, and E2E channel binding (DTLS fingerprints in signed transcripts) so the relay is untrusted by design.
+- **Error handling:** Consistently fail-closed — corrupt approval prefs → deny-all, Linux `basic` keyring → refuse to store secrets, CLA permission-check API errors → deny. Validation (zod/effect Schema, strict objects) at both trust directions; body reads double-bounded; in-memory maps size-capped and TTL'd.
+- **Testing:** Strong where it matters — redaction, IPC coverage, archive handling, transcript redaction all have dedicated tests; vitest + e2e (Windows installer e2e, provider CLI canary). Coverage of the sprawling main process is harder to assess but the security-critical seams are tested.
+- **Documentation:** Good — SECURITY.md, PRIVACY.md, AGENTS.md, per-directory AGENTS files, inline comments that explain security decisions (including honest acknowledgments of gaps, e.g. the Grok no-hash comment).
+
+## Contribution Opportunities
+
+1. **Safer agent defaults** — `packages/contracts/src/ipc-approvals.ts:81-84`, `ipc-agents.ts:38`: flip `defaultAutoApprove` to `false` (or default access to `workspace`) and add an explicit opt-in UI. Highest-impact change in the repo. Effort: small (code) to medium (UX).
+2. **Deny redirection in NorbiAI's Bash allowlist + isolate HOME** — `.github/workflows/norbiai-review.yml:661-688`: add `Bash(*>*)`, `Bash(*>>*)`, pipe patterns; set per-run `HOME`; drop `--setting-sources user`. Effort: trivial.
+3. **Mandatory `sha256` for ACP-registry binary distributions** — `src/main/acp-registry-catalog.ts:23-27`, `acp-registry-install.ts:84`: make the field required, reject hash-less entries, add `--ignore-scripts` to npm installs. Effort: small.
+4. **Session inactivity cutoff** — `apps/auth-api/src/server/session-policy.ts:5`: expire sessions idle >90–180 days in the existing retention cron (`last_used_at` is already maintained). Effort: small.
+5. **CI credential hygiene** — `remote-desktop-runtime.yml:575-625` (`persist-credentials: false` + API-based push) and `remote/api/Dockerfile`/`remote/coturn/Dockerfile` digest pinning. Effort: trivial.
+
+## Draft PRs
+
+### PR 1
+- **Title:** `fix(ci): deny shell redirection and isolate HOME in NorbiAI review sandbox`
+- **Branch:** `fix/norbiai-bash-redirection-deny`
+- **Files:** `.github/workflows/norbiai-review.yml`
+- **Changes:** Extend `claude_denied` with `Bash(*>*)`, `Bash(*>>*)`, `Bash(*|*)`, `Bash(*tee*)`; export `HOME=$RUNNER_TEMP/claude-home` (created fresh, deleted after) for the reviewer step; remove `--setting-sources user`; add a comment documenting why, matching the existing `--output`/`--no-index` rationale comments.
+- **Impact:** Closes the only identified path from PR-content prompt injection to persistent compromise of the self-hosted review runner and, transitively, the merge gate.
+
+### PR 2
+- **Title:** `fix(agents): default new agents to ask-before-acting instead of auto-approve`
+- **Branch:** `fix/agent-approval-safe-defaults`
+- **Files:** `packages/contracts/src/ipc-approvals.ts`, `packages/contracts/src/ipc-agents.ts`, `src/backend/agent-store.ts`, settings UI + migration (existing users keep current behavior; only new agents change).
+- **Changes:** Set `DEFAULT_APPROVAL_AUTOMATION_PREFERENCE.defaultAutoApprove = false`; optionally default `DEFAULT_AGENT_ACCESS` to `"workspace"`; add a one-time migration flag so existing installs are untouched; surface an explicit "Full access + auto-approve" opt-in toggle with a warning.
+- **Impact:** Removes the default prompt-injection-to-unattended-execution path while preserving the power-user workflow as an opt-in.
+
+### PR 3
+- **Title:** `fix(acp): require sha256 for registry binary distributions and skip npm lifecycle scripts`
+- **Branch:** `fix/acp-registry-integrity`
+- **Files:** `src/main/acp-registry-catalog.ts`, `src/main/acp-registry-install.ts`, related tests.
+- **Changes:** Change `sha256` from `optionalKey` to required in the binary-distribution schema; fail installs whose catalog entry lacks a hash (with a clear user error naming the agent); add `--ignore-scripts` to the registry `npm install` invocation.
+- **Impact:** Converts a registry/CDN compromise from silent native code execution into a hard failure, aligning the ACP path with the hash-pinned discipline already used for Codex, Claude, Bitwarden, and 1Password.
+
+## Scores (1-10)
+
+| Category | Score |
+|----------|-------|
+| Code Quality | 9 |
+| Security | 8 |
+| Documentation | 8 |
+| Test Coverage | 7 |
+| Contribution Potential | 7 |
+
+## Summary
+
+- **Total findings:** Critical: 0, High: 2, Medium: 4, Low: 15, Info: ~10
+- **Overall risk level:** LOW–MEDIUM. The engineering baseline is unusually strong — sandboxed/fused Electron with typed sender-verified IPC, timing-safe comparisons and pinned JWT algorithms throughout, hardened archive extraction, SHA-pinned CI, hash-locked runtimes, and an E2E design that distrusts its own relay. The residual risk is concentrated in two deliberate choices rather than coding errors.
+- **Top 3 recommendations:**
+  1. Flip the agent default from Full access + auto-approve to ask-first (H1) — it converts every prompt-injection surface in the product from RCE-equivalent back to an attended decision.
+  2. Harden the NorbiAI CI reviewer (H2/M2): deny shell redirection, isolate `HOME`, drop user settings, use ephemeral runners, and keep human review mandatory in branch protection.
+  3. Close the remaining unsigned-update paths (M1): mandatory `sha256` in the ACP registry, publisher-signature verification for auto-updated provider runtimes, and remove the stale npm quarantine exemptions.
